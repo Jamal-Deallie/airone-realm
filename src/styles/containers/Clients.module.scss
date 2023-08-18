@@ -1,0 +1,44 @@
+@import './../base/functions';
+
+.text-marquee {
+  position: relative;
+  display: flex;
+  align-items: center;
+  transform: rotate(-5deg);
+}
+
+.text-single {
+  position: relative;
+  white-space: nowrap;
+  padding: 0;
+  margin: 0;
+  will-change: transform;
+}
+
+.text {
+  padding: 0;
+  display: inline-block;
+  margin-right: 2rem;
+}
+
+.image {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: auto;
+  margin-left: 2rem;
+
+  width: mobile-vw(16px);
+  height: mobile-vw(16px);
+
+  @include desktop {
+    width: desktop-vw(30px);
+    height: desktop-vw(30px);
+  }
+}
+
+.client {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

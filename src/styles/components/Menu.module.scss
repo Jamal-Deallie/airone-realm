@@ -1,0 +1,85 @@
+@import './../base/functions';
+
+.btn {
+  position: relative;
+  z-index: 4;
+  border: solid 2px var(--secondary-variant);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  width: 148px;
+}
+
+.btn-wrap {
+  position: relative;
+  display: inline-block;
+ 
+}
+
+.label-top,
+.label-bot {
+  overflow: hidden;
+  position: absolute;
+  display: inline-block;
+  white-space: nowrap;
+  height: 48px;
+}
+
+.label-top {
+  background: pink;
+  height: fit-content;
+  height: 48px;
+}
+.menu {
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 2;
+
+  .overlay {
+    width: 100%;
+    height: 100vh;
+    z-index: 3;
+    position: relative;
+    background-color: var(--tertiary-variant);
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: mobile-vw(24px);
+
+    li {
+      a {
+        font-family: var(--heading-font), sans-serif;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-style: normal;
+        letter-spacing: 0.15px;
+        line-height: 0.86;
+        @include outline-font(var(--quaternary-variant), mobile-vw(1.75px));
+        transition: all 0.3s ease-in-out;
+        font-size: mobile-vw(54.77px);
+      }
+    }
+
+    @include desktop {
+      gap: desktop-vw(40px);
+      padding-top: desktop-vw(164px);
+
+      li {
+        a {
+          @include outline-font(var(--quaternary-variant), desktop-vw(3px));
+          font-size: desktop-vw(177.42px);
+        }
+      }
+    }
+  }
+}

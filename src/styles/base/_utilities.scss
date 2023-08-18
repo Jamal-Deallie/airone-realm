@@ -1,0 +1,96 @@
+@import './_functions.scss';
+
+.full-w {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.full-sm-w {
+  @include mobile {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+}
+
+.full-lg-w {
+  @include desktop {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+}
+
+.full-h {
+  min-height: calc(100vh - var(--nav-height));
+}
+
+.center-elem {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.center-flex {
+  @include flexbox($alignItems: center, $justifyContent: center);
+  &.column {
+    flex-direction: column;
+  }
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.relative {
+  position: relative;
+}
+
+.hide-desk {
+  @include mobile {
+    display: block;
+  }
+  @include desktop {
+    display: none;
+  }
+}
+
+.hide-mobile {
+  @include mobile {
+    display: none;
+  }
+  @include desktop {
+    display: block;
+  }
+}
+
+html:not(.has-scroll-smooth) {
+  .hide-on-native-scroll {
+    display: none;
+  }
+}
+
+html.has-scroll-smooth {
+  .hide-on-smooth-scroll {
+    display: none;
+  }
+}
+
+.br {
+  border: 1.5px solid var(--secondary-variant);
+  @include desktop {
+    border: 2px solid var(--secondary-variant);
+  }
+}

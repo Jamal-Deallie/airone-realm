@@ -1,0 +1,151 @@
+$font-sizes: (
+  '15': 139.01px,
+  '14': 119.21px,
+  '13': 109.21px,
+  '12': 95.37px,
+  '11': 76.29px,
+  '10': 61.04px,
+  '9': 48.83px,
+  '8': 37.06px,
+  '7': 31.25px,
+  '6': 25px,
+  '5': 20px,
+  '4': 16px,
+  '3': 12.8px,
+  '2': 10.24px,
+  '1': 8.19px,
+);
+
+h1,
+h2 {
+  font-family: var(--heading-font), sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  line-height: calc(2px + 2ex + 2px);
+  text-transform: uppercase;
+}
+
+h3,
+h4,
+h5 {
+  font-family: var(--heading-font), sans-serif;
+  text-transform: capitalize;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 86%;
+}
+
+li,
+p,
+a,
+label,
+span {
+  font-family: var(--body-font), sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  line-height: calc(2px + 2ex + 2px);
+}
+
+.txt-lg {
+  letter-spacing: -0.03em;
+  font-size: desktop-vw(map-get($font-sizes, '7'));
+  & .bold {
+    font-weight: 500;
+  }
+  @include desktop {
+    font-size: desktop-vw(map-get($font-sizes, '7'));
+  }
+}
+
+.txt-md {
+  font-size: mobile-vw(map-get($font-sizes, '5'));
+  &.light {
+    font-weight: 300;
+  }
+  &.bold {
+    font-weight: 500;
+  }
+  @include desktop {
+    font-size: desktop-vw(map-get($font-sizes, '5'));
+  }
+}
+
+.txt {
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.txt-sm {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  font-size: desktop-vw(map-get($font-sizes, '4'));
+  & .bold {
+    font-weight: 500;
+  }
+
+  @include desktop {
+    font-size: desktop-vw(map-get($font-sizes, '4'));
+  }
+}
+
+.split-child {
+  display: inline-block;
+  opacity: 1;
+}
+
+.title-lg {
+  font-family: var(--heading-font), sans-serif;
+  font-size: mobile-vw(map-get($font-sizes, '10'));
+  line-height: 1;
+  text-transform: uppercase;
+  @include desktop {
+    font-size: desktop-vw(map-get($font-sizes, '15'));
+    line-height: 0.86;
+  }
+}
+
+.title-md {
+  font-family: var(--heading-font), sans-serif;
+  font-size: mobile-vw(37.06px);
+  line-height: 1;
+  letter-spacing: -0.025em;
+  @include desktop {
+    font-size: desktop-vw(61.04px);
+    line-height: 1;
+    letter-spacing: -0.05em;
+  }
+  &.light {
+    font-weight: 400;
+  }
+
+  &.bold {
+    font-weight: 700;
+  }
+}
+
+.title-sm {
+  font-family: var(--heading-font), sans-serif;
+  font-size: mobile-vw(map-get($font-sizes, '6'));
+  line-height: 1;
+  @include desktop {
+    font-size: desktop-vw(map-get($font-sizes, '8'));
+  }
+  &.light {
+    font-weight: 400;
+  }
+
+  &.bold {
+    font-weight: 700;
+  }
+}
+
+.subheader {
+  color: var(--tertiary-variant);
+  font-weight: 400;
+  grid-column: 1/ -1;
+}
+
+.tac {
+  text-align: center;
+}

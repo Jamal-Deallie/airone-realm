@@ -1,0 +1,16 @@
+@import './../base/functions';
+
+.layout {
+  position: relative;
+  display: flex;
+  min-height: 100vh;
+  min-height: calc(100 * var(--vh));
+  overflow: hidden;
+  flex-direction: column;
+  overflow: hidden;
+
+  .main-wrap {
+    flex-grow: 1;
+    min-height: calc(100vh - var(--nav-height));
+  }
+}

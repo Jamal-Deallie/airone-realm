@@ -1,0 +1,224 @@
+@import './../base/functions';
+
+.footer {
+  width: 100%;
+  background-color: #075f0a;
+  border: solid 2px #075f0a;
+  @include desktop {
+    padding: 0 desktop-vw(40px) desktop-vw(24px) desktop-vw(40px);
+  }
+
+  a {
+    text-transform: capitalize;
+  }
+
+  span {
+    font-weight: 600;
+  }
+  .link-wrap,
+  .support-wrap {
+    @include desktop {
+      margin-top: desktop-vw(16px);
+    }
+
+    ul {
+      @include mobile {
+        margin-top: mobile-vw(12px);
+      }
+    }
+
+    h5 {
+      font-weight: 900;
+      font-size: mobile-vw(19px);
+
+      @include desktop {
+        font-size: desktop-vw(41.89px);
+        margin-bottom: desktop-vw(16px);
+      }
+    }
+
+    a {
+      transition: all 0.2s ease-in;
+      &:hover {
+        color: var(--secondary-variant);
+      }
+    }
+  }
+
+  hr {
+    background-color: var(--secondary-variant);
+    margin-top: mobile-vw(24px);
+    height: 1px;
+    width: 100%;
+
+    @include desktop {
+      margin-top: desktop-vw(128px);
+      margin-bottom: desktop-vw(32px);
+    }
+  }
+}
+
+.form {
+  width: 100%;
+  grid-column: 1 / -1;
+
+  @include desktop {
+    grid-column: 1 / 8;
+  }
+
+  h4 {
+    font-size: mobile-vw(16px);
+    line-height: 1.25;
+    letter-spacing: 0.5px;
+    @include desktop {
+      font-size: desktop-vw(30.77px);
+    }
+  }
+
+  .title {
+    margin-right: mobile-vw(44px);
+
+    @include desktop {
+      margin-right: 0;
+    }
+
+    h4 {
+      font-size: mobile-vw(32px);
+
+      @include desktop {
+        font-size: desktop-vw(67.77px);
+      }
+
+      &:nth-of-type(2) {
+        color: var(--secondary-variant);
+      }
+    }
+  }
+}
+
+.link-wrap {
+  grid-column: 1/ 4;
+
+  @include desktop {
+    grid-column: 9 / 11;
+  }
+}
+
+.support-wrap {
+  grid-column: 4 / -1;
+
+  @include desktop {
+    grid-column: 11 / -1;
+  }
+
+  a {
+    text-transform: capitalize;
+  }
+}
+
+.field-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-top: mobile-vw(24px);
+  position: relative;
+  border-bottom: solid 1px var(--secondary-variant);
+  width: 100%;
+  @include desktop {
+    margin-top: desktop-vw(48px);
+  }
+  input {
+    display: flex;
+    align-items: center;
+
+    @include desktop {
+      width: desktop-vw(800px);
+      font-size: desktop-vw(19px);
+      line-height: 25px;
+      padding: desktop-vw(1px) desktop-vw(8px);
+    }
+
+    &::placeholder {
+      text-transform: capitalize;
+    }
+  }
+
+  button {
+    display: flex;
+    align-items: flex-end;
+
+    width: mobile-vw(24px);
+    height: mobile-vw(24px);
+    svg {
+      width: mobile-vw(24px);
+      height: mobile-vw(24px);
+    }
+    stroke: var(--tertiary-variant);
+
+    @include desktop {
+      display: flex;
+      align-items: flex-end;
+
+      width: desktop-vw(24px);
+      height: desktop-vw(24px);
+      svg {
+        width: desktop-vw(24px);
+        height: desktop-vw(24px);
+      }
+      stroke: var(--tertiary-variant);
+    }
+  }
+}
+
+.socials-cont {
+  height: 24px;
+  color: var(--tertiary-variant);
+  ul {
+    @include mobile {
+      margin-top: mobile-vw(16px);
+    }
+    display: flex;
+    gap: mobile-vw(8px);
+
+    @include desktop {
+      gap: desktop-vw(24px);
+    }
+    li {
+      position: relative;
+      height: 24px;
+      width: 24px;
+
+      svg {
+        height: 24px;
+        fill: var(--tertiary-variant);
+      }
+    }
+
+    li:nth-of-type(1) {
+      aspect-ratio: 12 / 23;
+      width: auto;
+      height: 24px;
+    }
+    li:nth-of-type(2) {
+      aspect-ratio: 29 / 28;
+      width: auto;
+      height: 24px;
+    }
+    li:nth-of-type(3) {
+      aspect-ratio: 15.1 / 12.8;
+      width: auto;
+      height: 24px;
+    }
+    li:nth-of-type(4) {
+      aspect-ratio: 546.12 / 384;
+      width: auto;
+      height: 24px;
+    }
+  }
+}
+
+.image {
+  position: relative;
+  aspect-ratio: 3138/854;
+  width: 100%;
+  height: auto;
+}

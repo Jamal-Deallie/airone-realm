@@ -1,0 +1,102 @@
+@use 'sass:map';
+
+$layout: (
+  'columns-count': (
+    6,
+    12,
+  ),
+  'columns-gap': (
+    24px,
+    24px,
+  ),
+  'margin': (
+    16px,
+    40px,
+  ),
+);
+
+:root {
+  --layout-columns-count: #{nth(map.get($layout, 'columns-count'), 1)};
+  --layout-columns-gap: #{mobile-vw(nth(map.get($layout, 'columns-gap'), 1))};
+  --layout-margin: #{mobile-vw(nth(map.get($layout, 'margin'), 1))};
+
+  @include desktop {
+    --layout-columns-count: #{nth(map.get($layout, 'columns-count'), 2)};
+    --layout-columns-gap: #{desktop-vw(nth(map.get($layout, 'columns-gap'), 2))};
+    --layout-margin: #{desktop-vw(nth(map.get($layout, 'margin'), 2))};
+  }
+
+  --layout-width: calc(100vw - (2 * var(--layout-margin)));
+  --layout-column-width: calc(
+    (
+        var(--layout-width) -
+          ((var(--layout-columns-count) - 1) * var(--layout-columns-gap))
+      ) / var(--layout-columns-count)
+  );
+}
+
+.main-cont {
+  max-width: var(--layout-width);
+  margin-inline: auto;
+  @include desktop {
+    max-width: var(--layout-width);
+  }
+}
+
+.px-xl {
+  padding-top: mobile-vh(160px);
+  @include desktop {
+    padding-top: desktop-vh(160px);
+  }
+}
+
+.cont-inner {
+  padding-inline: var(--layout-margin);
+  @include desktop {
+    padding-inline: var(--layout-margin);
+  }
+}
+
+.grid-cont {
+  @extend .main-cont;
+  display: grid;
+  grid-template-columns: repeat(var(--layout-columns-count), minmax(0, 1fr));
+  grid-gap: var(--layout-columns-gap);
+}
+
+.grid-inner {
+  @extend .cont-inner;
+  display: grid;
+  grid-template-columns: repeat(var(--layout-columns-count), minmax(0, 1fr));
+  grid-gap: var(--layout-columns-gap);
+}
+
+.grid-col2 {
+  @extend .main-cont;
+
+  @include desktop {
+    grid-gap: var(--layout-columns-gap);
+    @include grid-cols(2);
+  }
+}
+
+.grid-block {
+  display: grid;
+  grid-template-columns: repeat(var(--layout-columns-count), minmax(0, 1fr));
+}
+
+.heading {
+  @extend .grid-inner;
+  p,
+  h1 {
+    grid-column: 1/-1;
+  }
+  @include desktop {
+    p:nth-of-type(1) {
+      grid-column: 1/3;
+    }
+    h1 {
+      grid-column: 4/-1;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@import './../base/functions';
+
+.desc {
+  position: relative;
+
+  p {
+    font-family: var(--heading-font);
+    font-size: mobile-vw(25.89px);
+    text-align: left;
+    line-height: 0.98;
+    letter-spacing: -0.25px;
+    font-weight: 900;
+    font-style: normal;
+    text-transform: uppercase;
+  }
+
+  @include desktop {
+    p {
+      font-size: desktop-vw(67.77px);
+    }
+  }
+}
+
+.image {
+  position: relative;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 682 / 306.281;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 682 / 306.281;
+  }
+}

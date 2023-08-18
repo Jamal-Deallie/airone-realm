@@ -1,0 +1,25 @@
+@use 'sass:color';
+
+$colors: (
+  'primary': #B0D6F5,
+  'secondary': #000,
+  'tertiary': #5fb0ff,
+  'ghost': rgba(0, 0, 0, 0),
+  'disabled': #808080,
+  'error': #ff6347,
+);
+
+@each $name, $color in $colors {
+  .#{$name}-clr {
+    color: #{$color};
+  }
+  .#{$name}-bg {
+    background-color: #{$color};
+  }
+}
+
+:root {
+  @each $name, $color in $colors {
+    --#{$name}-variant: #{$color};
+  }
+}

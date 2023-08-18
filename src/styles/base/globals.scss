@@ -1,0 +1,63 @@
+@import './_scroll.scss';
+@import './_reset.scss';
+@import './_utilities.scss';
+@import './_functions.scss';
+@import './_layouts.scss';
+@import './_font-style';
+@import './_colors';
+@import './_spacing';
+
+html {
+  font-weight: bolder;
+  scrollbar-width: thin;
+  color: var(--secondary-variant);
+  &.lenis-stopped {
+    overflow: hidden;
+  }
+}
+
+html,
+body {
+  overscroll-behavior: none;
+}
+
+body {
+  min-height: 100vh;
+}
+
+a,
+button,
+input,
+label,
+textarea,
+select {
+  color: inherit;
+  cursor: pointer;
+  font-family: var(--body-font);
+}
+
+*::selection {
+  background-color: var(--theme-secondary);
+  color: var(--theme-primary);
+}
+svg.icon {
+  path[fill],
+  rect[fill],
+  circle[fill] {
+    fill: currentColor;
+  }
+
+  path[stroke],
+  rect[stroke],
+  circle[stroke] {
+    stroke: currentColor;
+  }
+}
+
+:root {
+  --nav-height: #{mobile-vw(75px)};
+
+  @include desktop {
+    --nav-height: #{desktop-vw(100px)};
+  }
+}
