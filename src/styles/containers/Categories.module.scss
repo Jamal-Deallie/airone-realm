@@ -1,0 +1,47 @@
+@import './../base/functions';
+
+.cat {
+  .desc,
+  .img {
+    grid-column: 1/-1;
+  }
+  @include desktop {
+    .desc {
+      grid-column: 2/7;
+    }
+    .img {
+      grid-column: 7/-1;
+    }
+  }
+}
+.cat-reverse {
+  .desc,
+  .img {
+    grid-column: 1/-1;
+  }
+  @include desktop {
+    .desc {
+      grid-column: 7/12;
+      order: 2;
+    }
+    .img {
+      grid-column: 1/7;
+      order: 1;
+    }
+  }
+}
+
+.img {
+  position: relative;
+  width: 100%;
+  height: mobile-vw(600px);
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  @include desktop {
+    height: desktop-vw(750px);
+  }
+}

@@ -6,6 +6,7 @@
   width: 100%;
   height: auto;
   overflow: hidden;
+
   @include mobile {
   }
   @include desktop {
@@ -15,43 +16,37 @@
 
 .title {
   position: relative;
-  max-width: mobile-vw(400px);
+  // max-width: mobile-vw(400px);
+  // @include desktop {
+  //   max-width: desktop-vw(1000px);
+  // }
+}
+.inner {
+  position: relative;
+  height: desktop-vw(600px);
   @include desktop {
-    max-width: desktop-vw(900px);
+    height: desktop-vw(600px);
+    h1 {
+      div:nth-of-type(5) {
+        z-index: 2;
+      }
+    }
   }
 }
 
-.cloud-l,
-.cloud-r {
-  z-index: 1;
-  position: absolute;
-  bottom: 0;
-  height: mobile-vw(200px);
+.image {
+  aspect-ratio: 937/752;
+  height: desktop-vw(600px);
+  width: auto;
   img {
-    object-fit: contain;
     width: 100%;
     height: 100%;
-  }
-  @include desktop {
-    height: desktop-vw(350px);
-    width: auto;
+    object-fit: cover;
+    object-position: center center;
   }
 }
 
-.cloud-l {
-  aspect-ratio: 962/509;
-  left: 0;
-  transform: translate(mobile-vw(-200px));
-  @include desktop {
-    transform: translate(desktop-vw(-165px));
-  }
-}
-
-.cloud-r {
-  aspect-ratio: 985/520;
-  right: 0;
-  transform: translate(mobile-vw(200px));
-  @include desktop {
-    transform: translate(desktop-vw(160px));
-  }
+.btn-cont {
+  position: relative;
+  width: fit-content;
 }

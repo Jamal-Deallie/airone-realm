@@ -1,5 +1,47 @@
 @import './../base/functions';
+.footer-cont {
+  border: 1px solid var(--secondary-variant);
 
+  h1 {
+    grid-column: 1/-1;
+  }
+  .logo {
+    aspect-ratio: 989.92/590.1;
+
+    svg {
+      fill: var(--secondary-variant);
+    }
+
+    @include desktop {
+      height: desktop-vw(125px);
+    }
+  }
+}
+
+.form-wrap {
+  width: 100%;
+
+  @include desktop {
+    grid-column: 1/8;
+  }
+}
+
+.links {
+  display: flex;
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: mobile-vw(16px);
+  }
+  grid-column: 1/-1;
+  @include desktop {
+    gap: desktop-vw(96px);
+    grid-column: 10/-1;
+    div {
+      gap: desktop-vw(16px);
+    }
+  }
+}
 .footer {
   width: 100%;
   background-color: #075f0a;

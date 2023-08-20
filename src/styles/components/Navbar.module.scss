@@ -22,40 +22,7 @@
 }
 
 .logo {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  cursor: pointer;
-  z-index: 11;
-  aspect-ratio: 259.33 / 246.849;
-  border: solid 2px var(--secondary-variant);
-  border-radius: 50%;
-  width: auto;
-  overflow: hidden;
-
-  height: calc(var(--nav-height) - mobile-vw(20px));
-  @include desktop {
-    height: calc(var(--nav-height) - desktop-vw(20px));
-  }
-  .wrap {
-    position: relative;
-    aspect-ratio: 259.33 / 246.849;
-    height: calc(var(--nav-height) - mobile-vw(27px));
-    width: auto;
-    @include desktop {
-      height: calc(var(--nav-height) - desktop-vw(30px));
-    }
-  }
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  svg {
+    fill: var(--secondary-variant);
   }
 }

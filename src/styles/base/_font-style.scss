@@ -18,8 +18,8 @@ $font-sizes: (
 
 h1,
 h2 {
-  font-family: var(--heading-font), sans-serif;
-  font-weight: 700;
+  font-family: var(--heading-font);
+
   font-style: normal;
   line-height: calc(2px + 2ex + 2px);
   text-transform: uppercase;
@@ -94,6 +94,17 @@ span {
   opacity: 1;
 }
 
+.title-xlg {
+  font-family: var(--heading-font), sans-serif;
+  font-size: mobile-vw(map-get($font-sizes, '10'));
+  line-height: 1;
+  text-transform: uppercase;
+  @include desktop {
+    font-size: desktop-vw(400px);
+    line-height: 0.86;
+  }
+}
+
 .title-lg {
   font-family: var(--heading-font), sans-serif;
   font-size: mobile-vw(map-get($font-sizes, '10'));
@@ -127,9 +138,24 @@ span {
 .title-sm {
   font-family: var(--heading-font), sans-serif;
   font-size: mobile-vw(map-get($font-sizes, '6'));
-  line-height: 1;
+  line-height: 0.9;
   @include desktop {
     font-size: desktop-vw(map-get($font-sizes, '8'));
+  }
+  &.light {
+    font-weight: 400;
+  }
+
+  &.bold {
+    font-weight: 700;
+  }
+}
+.title-xs {
+  font-family: var(--heading-font), sans-serif;
+  font-size: mobile-vw(map-get($font-sizes, '6'));
+  line-height: 1;
+  @include desktop {
+    font-size: desktop-vw(map-get($font-sizes, '7'));
   }
   &.light {
     font-weight: 400;

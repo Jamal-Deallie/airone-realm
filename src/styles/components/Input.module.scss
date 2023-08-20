@@ -1,1 +1,59 @@
+@use 'sass:color';
 @import './../base/functions';
+
+.input {
+  width: 100%;
+  color: var(--primary-variant);
+  padding: mobile-vw(4px) mobile-vw(4px);
+  font-family: var(--body-font), sans-serif;
+  font-size: mobile-vw(16px);
+  border-radius: 4px;
+  font-weight: 300;
+  border: solid 2.5px var(--ghost-variant);
+  outline: none;
+  background-color: lighten(#000, 5%);
+  line-height: 1;
+  flex-shrink: 0;
+  &::placeholder {
+    color: rgb(133, 133, 133);
+    font-size: mobile-vw(16px);
+  }
+  &:hover {
+    border: solid 2.5px var(--tertiary-variant);
+  }
+  &:focus {
+    border: solid 2.5px var(--tertiary-variant);
+  }
+  &[type='text'] {
+    text-transform: capitalize;
+  }
+
+  @include desktop {
+    &[type='text'] {
+      min-height: desktop-vw(48px);
+      &::placeholder {
+        text-transform: capitalize;
+      }
+    }
+    &::placeholder {
+      font-size: desktop-vw(20px);
+    }
+    padding: desktop-vw(8px) desktop-vw(8px);
+    font-size: desktop-vw(20px);
+    min-width: desktop-vw(350px);
+  }
+}
+
+.input[disabled] {
+  --input-border: #ccc;
+  background-color: #eee;
+  cursor: not-allowed;
+}
+
+// .input:focus {
+//   border-color: hsl(
+//     var(--input-focus-h),
+//     var(--input-focus-s),
+//     var(--input-focus-l)
+//   );
+// }

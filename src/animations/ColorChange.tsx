@@ -4,10 +4,10 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { useIsomorphicLayoutEffect } from '@/hooks/useIsomorphicLayout';
 
 export default function Home({ children }: { children: ReactNode }) {
-  const colors = ['#f38630', '#6fb936', '#ccc', '#6fb936'];
+  const colors = ['#6384DD', '#6fb936', '#ccc', '#6fb936'];
   const textColor = ['#000', '#fff'];
   const prevColor = ['#fff', '#000'];
-  const bgColors = ['#750909', '#6fb936', '#ccc', '#6fb936'];
+  const bgColors = ['#C198F1', '#6fb936', '#ccc', '#6fb936'];
   const root = useRef<HTMLDivElement>(null!);
 
   useIsomorphicLayoutEffect(() => {
@@ -45,5 +45,9 @@ export default function Home({ children }: { children: ReactNode }) {
     };
   }, []);
 
-  return <div ref={root} className='primary-bg'>{children}</div>;
+  return (
+    <div ref={root} className='primary-bg'>
+      {children}
+    </div>
+  );
 }

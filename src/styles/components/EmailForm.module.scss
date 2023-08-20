@@ -1,0 +1,46 @@
+@import './../base/functions';
+
+
+.email-input {
+  display: flex;
+  border: 1px solid var(--secondary-variant);
+  min-height: mobile-vw(48px);
+  padding-inline: mobile-vw(8px);
+  input {
+    width: 100%;
+    text-transform: capitalize;
+    color: var(--secondary-variant);
+
+    &::placeholder {
+      color: var(--secondary-variant);
+    }
+  }
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: mobile-vw(48px);
+    transition: transform 0.5s ease;
+    &:hover {
+      transform: translate(2px);
+    }
+
+    span {
+      font-size: mobile-vw(19px);
+    }
+  }
+
+  &:focus-within {
+    background: var(--tertiary-variant-dark);
+  }
+  @include desktop {
+    padding-inline: desktop-vw(16px);
+    min-height: desktop-vw(56px);
+    button {
+      width: desktop-vw(56px);
+      span {
+        font-size: desktop-vw(24px);
+      }
+    }
+  }
+}

@@ -1,0 +1,139 @@
+@import './../base/functions';
+
+.card {
+  aspect-ratio: 3 / 2;
+  width: 100%;
+  height: auto;
+  border: 1.5px solid var(--secondary-variant);
+  padding: mobile-vw(16px);
+  hr {
+    background-color: var(--secondary-variant);
+    margin: mobile-vw(8px) 0;
+    height: 2px;
+    width: 100%;
+  }
+  h3 {
+    margin-top: mobile-vw(16px);
+    font-size: mobile-vw(24px);
+  }
+  p {
+    font-size: mobile-vw(12px);
+  }
+  svg {
+    fill: var(--primary-variant);
+  }
+
+  @include desktop {
+    aspect-ratio: 4 / 3;
+    padding: desktop-vw(24px);
+    width: desktop-vw(400px);
+    h3 {
+      margin-top: desktop-vw(24px);
+      font-size: desktop-vw(24px);
+    }
+
+    p {
+      font-size: desktop-vw(16px);
+    }
+
+    hr {
+      margin: desktop-vw(8px) 0;
+    }
+  }
+}
+
+.brand {
+  aspect-ratio: 124.75 / 124.43;
+  position: relative;
+  height: mobile-vw(70px);
+  width: auto;
+  img {
+    object-fit: cover;
+  }
+  @include desktop {
+    height: desktop-vw(80px);
+    width: auto;
+  }
+}
+
+.web {
+  position: relative;
+  aspect-ratio: 113.2 / 125.76;
+  height: mobile-vw(70px);
+  width: auto;
+
+  img {
+    object-fit: cover;
+  }
+  @include desktop {
+    height: desktop-vw(80px);
+    width: auto;
+  }
+}
+
+.analytics {
+  position: relative;
+  aspect-ratio: 117.33 / 125.75;
+  height: mobile-vw(70px);
+  width: auto;
+
+  img {
+    object-fit: cover;
+  }
+
+  @include desktop {
+    height: desktop-vw(80px);
+    width: auto;
+  }
+}
+.support {
+  position: relative;
+  aspect-ratio: 125.76 / 113.35;
+  height: mobile-vw(90px);
+  width: auto;
+
+  img {
+    object-fit: cover;
+  }
+
+  @include desktop {
+    height: desktop-vw(80px);
+    width: auto;
+  }
+}
+.creative {
+  position: relative;
+  aspect-ratio: 125.75 / 119.41;
+  height: mobile-vw(70px);
+  width: auto;
+
+  img {
+    object-fit: cover;
+  }
+
+  @include desktop {
+    height: desktop-vw(80px);
+    width: auto;
+  }
+}
+.strategy {
+  position: relative;
+  aspect-ratio: 125.8 / 117.2;
+  height: mobile-vw(90px);
+  width: auto;
+
+  img {
+    object-fit: cover;
+  }
+
+  @include desktop {
+    height: desktop-vw(80px);
+    width: auto;
+  }
+}
+
+.card + .card {
+  @include mobile {
+    margin-top: mobile-vw(24px);
+  }
+}

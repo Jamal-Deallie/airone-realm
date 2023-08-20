@@ -5,7 +5,7 @@
 
   p {
     font-family: var(--heading-font);
-    font-size: mobile-vw(25.89px);
+
     text-align: left;
     line-height: 0.98;
     letter-spacing: -0.25px;
@@ -14,9 +14,19 @@
     text-transform: uppercase;
   }
 
+  .wrap {
+    // webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    // clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    display: flex;
+    will-change: transform;
+    background: pink;
+  }
+
   @include desktop {
-    p {
-      font-size: desktop-vw(67.77px);
+    .wrap {
+      aspect-ratio: 233.172/44;
+      width: auto;
+      height: desktop-vw(20px);
     }
   }
 }

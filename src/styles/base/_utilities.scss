@@ -94,3 +94,8 @@ html.has-scroll-smooth {
     border: 2px solid var(--secondary-variant);
   }
 }
+
+.split-parent {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 100%);
+  border: 2px solid yellow;
+}

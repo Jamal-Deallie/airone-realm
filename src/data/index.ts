@@ -176,3 +176,42 @@ export const clientList = [
     client: 'Spotify',
   },
 ];
+
+export const services = [
+  {
+    id: 1,
+    service: 'creative',
+    src: 'https://res.cloudinary.com/dtwk4dm3g/image/upload/v1676674882/air_one/creative_o25q02.svg',
+    desc: 'UI & UX • Web Design • Print Design • Consulting',
+  },
+  {
+    id: 2,
+    service: 'brand',
+    src: 'https://res.cloudinary.com/dtwk4dm3g/image/upload/v1676674871/air_one/brand_vriwfq.svg',
+    desc: 'Logo & Identity • Visual language • Guidelines Design Systems',
+  },
+  {
+    id: 3,
+    service: 'strategy',
+    src: 'https://res.cloudinary.com/dtwk4dm3g/image/upload/v1676674925/air_one/strategy_ualpci.svg',
+    desc: 'Social Media • Inbound Marketing • Copywriting • Visual Content • Campaigns',
+  },
+  {
+    id: 4,
+    service: 'web',
+    src: 'https://res.cloudinary.com/dtwk4dm3g/image/upload/v1676674917/air_one/web_z2c8ak.svg',
+    desc: 'UI & UX • Web Design • Print Design • Consulting',
+  },
+  {
+    id: 5,
+    service: 'analytics',
+    src: 'https://res.cloudinary.com/dtwk4dm3g/image/upload/v1676674871/air_one/analytics_cbyltc.svg',
+    desc: 'UI & UX • Web Design • Print Design • Consulting',
+  },
+  {
+    id: 6,
+    service: 'support',
+    src: 'https://res.cloudinary.com/dtwk4dm3g/image/upload/v1676674925/air_one/support_mxzlpl.svg',
+    desc: 'UI & UX • Web Design • Print Design • Consulting',
+  },
+];

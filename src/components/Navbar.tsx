@@ -3,20 +3,15 @@ import Image from 'next/image';
 import Menu from '@/components/Menu';
 import styles from '@/styles/components/Navbar.module.scss';
 import cn from 'classnames';
-
+import Logo from '@/svgs/Logo';
 export default function Navbar() {
   return (
     <nav className={cn(styles['nav'], 'tertiary-bg')}>
       <div className={styles['inner']}>
-        <Link href='/' className={styles['logo']}>
+        <Link href='/' className={cn(styles['logo'], 'center-elem' )}>
           <div className={styles['wrap']}>
-            <Image
-              src={'/images/a-logo.svg'}
-              alt='logo'
-              fill
-              sizes='(max-width: 768px) 100vw)'
-              priority
-            />
+            <Logo />
+            <span className='title-xs'>Refresh</span>
           </div>
         </Link>
         <Menu />

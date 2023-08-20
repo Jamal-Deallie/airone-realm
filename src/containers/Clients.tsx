@@ -32,7 +32,7 @@ export default function Clients() {
                           'https://res.cloudinary.com/dtwk4dm3g/image/upload/v1676674871/air_one/circle_yk6pxm.svg'
                         }
                         fill
-                        sizes='(max-width: 768px) 100vw)'
+                        sizes='(max-width: 768px) 10vw)'
                       />
                     </div>
                   </div>

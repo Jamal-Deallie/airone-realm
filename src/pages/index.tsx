@@ -4,6 +4,8 @@ import Hero from '@/containers/Hero';
 import Intro from '@/containers/Intro';
 import Clients from '@/containers/Clients';
 import ColorChange from '@/animations/ColorChange';
+import Services from '@/containers/Services';
+import Categories from '@/components/ServiceCategory';
 
 export default function Home() {
   return (
@@ -13,8 +15,15 @@ export default function Home() {
         <Intro />
       </div>
       <div className='sections'>
-        <Clients />
+        <Categories />
       </div>
+      <div className='sections'>
+        <Categories reverse />
+      </div>
+      <div className='sections'>
+        <Categories />
+      </div>
+      <Services />
     </ColorChange>
   );
 }

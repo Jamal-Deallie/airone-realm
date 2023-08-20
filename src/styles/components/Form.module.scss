@@ -1,0 +1,14 @@
+@import './../base/functions';
+
+.form-cont {
+  position: relative;
+  @include desktop {
+    max-width: desktop-vw(450px);
+    button {
+      width: desktop-vw(450px);
+    }
+    label {
+      font-weight: 600;
+    }
+  }
+}

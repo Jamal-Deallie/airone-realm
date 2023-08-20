@@ -16,9 +16,9 @@ const inter = Inter({ subsets: ['latin'], variable: '--body-font' });
 const myFont = localFont({
   src: [
     {
-      path: '../../public/fonts/BoldenVan.ttf',
-      weight: '700',
-      style: 'italic',
+      path: '../../public/fonts/Rockets.ttf',
+      weight: '900',
+      style: 'normal',
     },
   ],
   variable: '--heading-font',

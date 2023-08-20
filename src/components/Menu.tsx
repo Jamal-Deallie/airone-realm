@@ -3,7 +3,7 @@ import { useIsomorphicLayoutEffect } from '@/hooks/useIsomorphicLayout';
 import { gsap } from 'gsap';
 import { links } from '@/data';
 import Link from 'next/link';
-import cn from 'classNames';
+import cn from 'classnames';
 import styles from '@/styles/components/Menu.module.scss';
 import { useLenis } from '@studio-freight/react-lenis';
 import { SplitText } from 'gsap/dist/SplitText';

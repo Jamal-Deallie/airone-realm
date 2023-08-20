@@ -5,8 +5,9 @@ import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import styles from '@/styles/components/Footer.module.scss';
 import cn from 'classnames';
-
-
+import Logo from '@/svgs/Logo';
+import EmailForm from '@/components/EmailForm';
+import NavLink from '@/components/NavLink';
 export default function Footer() {
   const [email, setEmail] = useState('');
 
@@ -16,72 +17,45 @@ export default function Footer() {
     alert(`The email you entered was: ${email}`);
   };
   return (
-    <div className={cn(styles['footer-cont'], 'bg-primary')}>
-      <div className={styles['image']}>
-        <Image
-          alt='Landscape'
-          src={'/images/footer-top.webp'}
-          fill
-          sizes='(max-width: 768px) 100vw)'
-        />
+    <footer
+      className={cn(
+        'grid-inner primary-bg pt-lg-64 pt-sm-64 pb-lg-64',
+        styles['footer-cont']
+      )}>
+      <div className={styles['logo']}>
+        <Logo />
       </div>
-      <footer className={styles['footer']}>
-        <div className='grid-inner'>
-          <div className={styles['form']}>
-            <div>
-              <h4 className='title'>
-                Stay up to date with the latest news from the Airone
-              </h4>
-            </div>
-            <form onSubmit={onInputSubmit}>
-              <div className={styles['field-wrap']}>
-                <input
-                  placeholder='Email'
-                  className={styles['field']}
-                  type='email'
-                  onChange={e => setEmail(e.target.value)}
-                />
+      <h1 className='clr-tertiary title-sm'>uniting body, mind, and spirit</h1>
 
-                <button type='submit'>
-                  {' '}
-                  <span className='clr-tertiary'>&#11106;</span>
-                </button>
-              </div>
-            </form>
-          </div>
+      <EmailForm
+        title='uniting body, mind, and spirit'
+        classes={styles['form-wrap']}
+      />
 
-          <div className={styles['link-wrap']}>
-            <h5 className='title clr-tertiary'>Menu</h5>
-            <ul>
-              {links.map(({ id, path, label }) => {
-                return (
-                  <li key={id}>
-                    <Link href={path} className='clr-tertiary'>
-                      {label}
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-          <div className={styles['support-wrap']}>
-            <h5 className='title clr-tertiary'>Support</h5>
-
-            <ul>
-              {supportLinks.map(({ id, path, label }) => {
-                return (
-                  <li key={id}>
-                    <Link href={path} className='clr-tertiary'>
-                      {label}
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
+      <div className={styles['links']}>
+        <div>
+          <NavLink href='/' url='/'>
+            Link 1
+          </NavLink>
+          <NavLink href='/' url='/'>
+            Link 2
+          </NavLink>
+          <NavLink href='/' url='/'>
+            Link 3
+          </NavLink>
         </div>
-  
-      </footer>
-    </div>
+        <div>
+          <NavLink href='/' url='/'>
+            Link 4
+          </NavLink>
+          <NavLink href='/' url='/'>
+            Link 5
+          </NavLink>
+          <NavLink href='/' url='/'>
+            Link 6
+          </NavLink>
+        </div>
+      </div>
+    </footer>
   );
 }
