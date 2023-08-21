@@ -96,7 +96,7 @@ span {
 
 .title-xlg {
   font-family: var(--heading-font), sans-serif;
-  font-size: mobile-vw(map-get($font-sizes, '10'));
+  font-size: mobile-vw(120px);
   line-height: 1;
   text-transform: uppercase;
   @include desktop {
@@ -174,4 +174,13 @@ span {
 
 .tac {
   text-align: center;
+}
+
+
+.light {
+  font-weight: 400;
+}
+
+.bold {
+  font-weight: 600;
 }

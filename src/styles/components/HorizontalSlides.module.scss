@@ -1,39 +1,54 @@
 @import './../base/functions';
 
-.wrapper {
-  position: relative;
-  height: desktop-vw(1054.4375px);
-  .inner {
-    overflow: hidden;
+.container {
+  width: 600vw;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
 
-    .overflow {
-      display: inline-flex;
-    }
+.firstContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: yellow;
+}
 
-    @include mobile {
-      width: mobile-vw(375px);
-    }
+.panel {
+  width: 100vw;
+  height: 100vh;
+}
 
-    @include desktop {
-      position: sticky;
-      --height: min(
-        #{desktop-vw(632px)},
-        calc(100vh - var(--header-height) - #{desktop-vw(80px)})
-      );
-      top: calc((100vh + var(--header-height) - var(--height)) / 2);
-    }
+.red {
+  background: red;
+}
+.orange {
+  background: orange;
+}
+.purple {
+  background: purple;
+}
+.blue {
+  background-color: blue;
+}
 
-    @include mobile {
-      .cards {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+.box-1 {
+  height: desktop-vw(200px);
+  width: desktop-vw(200px);
+  background-color: blue;
+}
+.box-2 {
+  height: desktop-vw(200px);
+  width: desktop-vw(200px);
+  background-color: pink;
+}
 
-        > * {
-          margin-bottom: mobile-vw(32px);
-        }
-      }
-    }
-  }
+.vid-cont {
+  grid-column: 1/5;
+}
+
+.desc{
+  grid-column: 6/-1;
 }

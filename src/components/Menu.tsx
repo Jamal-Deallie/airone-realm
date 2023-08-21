@@ -27,10 +27,7 @@ export default function Menu() {
     let links = gsap.utils.toArray('.link');
 
     let ctx = gsap.context(() => {
-      let splitTop = new SplitText('.split-top', { type: 'chars' });
-      let splitBot = new SplitText('.split-bot', { type: 'chars' });
       tl.current
-
         .fromTo(
           '.cont',
           { yPercent: 900, autoAlpha: 0 },
@@ -78,10 +75,9 @@ export default function Menu() {
   return (
     <>
       <button className={styles.btn} role='button' id='btn' onClick={openMenu}>
-        Menu
-        {/* <div className={styles['btn-wrap']}>
-          <span className={cn(styles['label-top'], 'split-top')}>Menu</span>
-        </div> */}
+        <span className={styles['line-1']}></span>
+        <span className={styles['line-2']}></span>
+        <span className={styles['line-3']}></span>
       </button>
 
       <div className={cn(styles['menu'], 'cont')}>

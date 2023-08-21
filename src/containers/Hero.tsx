@@ -33,10 +33,10 @@ export default function Hero({}: Props) {
 
   return (
     <div className={cn(styles['hero'], 'primary-bg')}>
-      <div className='main-cont pt-lg-180 pt-sm-120'>
+      <div className='main-cont pt-lg-180 pt-sm-128'>
         <div className={cn(styles['inner'], 'm-lg-auto')} ref={root}>
           <h1 className='tac title-xlg tertiary-clr'>REFRESH</h1>
-          <div className={cn(styles['image'], 'center-elem')}>
+          <div className={cn(styles['image'], 'center-elem mt-sm-24')}>
             <Image
               src='/images/hero.webp'
               alt='Hero'
@@ -47,7 +47,7 @@ export default function Hero({}: Props) {
             />
           </div>
         </div>
-        <div className={cn(styles['btn-cont'], 'mx-lg-auto')}>
+        <div className={cn(styles['btn-cont'], 'mx-lg-auto mt-sm-48')}>
           <LinkButton href='/' size='xlg' variant='primary'>
             Join Now
           </LinkButton>

@@ -1,0 +1,52 @@
+@import './../base/functions';
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--nav-height);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-bottom: 2px solid;
+}
+.logo-wrap {
+  span {
+    display: block;
+    text-align: center;
+  }
+}
+
+.logo {
+  svg {
+    aspect-ratio: 989.92/590.12;
+    height: desktop-vw(58px);
+    width: auto;
+    svg {
+      fill: var(--secondary-variant);
+    }
+  }
+}
+
+.wrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link-wrap {
+  display: flex;
+  gap: desktop-vw(48px);
+}
+
+.btn-cont{
+  @include flexbox($justifyContent: center, $alignItems: center);
+  gap: desktop-vw(32px);
+}

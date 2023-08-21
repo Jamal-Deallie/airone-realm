@@ -3,18 +3,26 @@
 .btn {
   position: relative;
   z-index: 4;
-  border: solid 2px var(--secondary-variant);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 48px;
-  width: 148px;
+
+  @include flexbox(
+    $direction: column,
+    $justifyContent: space-around,
+    $alignItems: center
+  );
+  height: 32px;
+  width: 48px;
+
+  span {
+    background-color: var(--secondary-variant);
+    border-radius: 1em;
+    width: 2rem;
+    height: 0.25rem;
+  }
 }
 
 .btn-wrap {
   position: relative;
   display: inline-block;
- 
 }
 
 .label-top,

@@ -1,0 +1,17 @@
+@import './../base/functions';
+
+.cart-btn {
+  @include flexbox($justifyContent: center, $alignItems: center);
+  @include desktop {
+    background: #000;
+    height: desktop-vw(64px);
+    width: desktop-vw(64px);
+    border-radius: 50%;
+    svg {
+      aspect-ratio: 576/512;
+      width: desktop-vw(32px);
+      height: auto;
+      fill: var(--tertiary-variant);
+    }
+  }
+}

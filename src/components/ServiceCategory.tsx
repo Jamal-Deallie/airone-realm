@@ -23,7 +23,7 @@ export default function Categories({
       <div className='grid-inner'>
         <div className={cn(styles['desc'], 'pt-lg-180')}>
           <h1 className='title-lg'>Healthy</h1>
-          <p className='txt-md pt-lg-96'>
+          <p className='txt-md pt-lg-96 pt-sm-32'>
             Sodales ut eu sem integer vitae justo eget magna fermentum iaculis
             eu non diam phasellus vestibulum lorem sed risus ultricies tristique
             nulla aliquet enim tortor at auctor urna nunc id cursus metus

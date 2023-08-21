@@ -3,9 +3,10 @@
 .form-cont {
   position: relative;
   @include desktop {
-    max-width: desktop-vw(450px);
+    min-width: 100%;
+
     button {
-      width: desktop-vw(450px);
+      min-width: 100%;
     }
     label {
       font-weight: 600;

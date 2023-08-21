@@ -58,6 +58,6 @@ svg.icon {
   --nav-height: #{mobile-vw(75px)};
 
   @include desktop {
-    --nav-height: #{desktop-vw(100px)};
+    --nav-height: #{desktop-vw(110px)};
   }
 }

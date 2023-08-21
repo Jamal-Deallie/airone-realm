@@ -1,40 +1,43 @@
 @import './../base/functions';
 .footer-cont {
-  border: 1px solid var(--secondary-variant);
+  border-top: 1px solid var(--secondary-variant);
 
   h1 {
     grid-column: 1/-1;
   }
   .logo {
     aspect-ratio: 989.92/590.1;
-
+    height: mobile-vw(64px);
     svg {
       fill: var(--secondary-variant);
     }
-
     @include desktop {
-      height: desktop-vw(125px);
+      height: desktop-vw(96px);
     }
   }
 }
 
 .form-wrap {
   width: 100%;
-
+  grid-column: 1/-1;
   @include desktop {
-    grid-column: 1/8;
+    grid-column: 1/5;
   }
 }
 
 .links {
   display: flex;
+  grid-column: 1/-1;
   div {
     display: flex;
     flex-direction: column;
-    gap: mobile-vw(16px);
+    gap: mobile-vw(24px);
   }
-  grid-column: 1/-1;
+  @include mobile {
+    gap: mobile-vw(48px);
+  }
   @include desktop {
+    justify-self: flex-end;
     gap: desktop-vw(96px);
     grid-column: 10/-1;
     div {
@@ -42,225 +45,48 @@
     }
   }
 }
-.footer {
-  width: 100%;
-  background-color: #075f0a;
-  border: solid 2px #075f0a;
-  @include desktop {
-    padding: 0 desktop-vw(40px) desktop-vw(24px) desktop-vw(40px);
+.bottom {
+  border-top: 1.75px solid var(--secondary-variant);
+  align-items: center;
+  div {
+    grid-column: 1/-1;
   }
-
-  a {
-    text-transform: capitalize;
-  }
-
-  span {
-    font-weight: 600;
-  }
-  .link-wrap,
-  .support-wrap {
-    @include desktop {
-      margin-top: desktop-vw(16px);
-    }
-
-    ul {
-      @include mobile {
-        margin-top: mobile-vw(12px);
-      }
-    }
-
-    h5 {
-      font-weight: 900;
-      font-size: mobile-vw(19px);
-
-      @include desktop {
-        font-size: desktop-vw(41.89px);
-        margin-bottom: desktop-vw(16px);
-      }
-    }
-
-    a {
-      transition: all 0.2s ease-in;
-      &:hover {
-        color: var(--secondary-variant);
-      }
-    }
-  }
-
-  hr {
-    background-color: var(--secondary-variant);
-    margin-top: mobile-vw(24px);
-    height: 1px;
-    width: 100%;
-
-    @include desktop {
-      margin-top: desktop-vw(128px);
-      margin-bottom: desktop-vw(32px);
-    }
-  }
-}
-
-.form {
-  width: 100%;
-  grid-column: 1 / -1;
-
-  @include desktop {
-    grid-column: 1 / 8;
-  }
-
-  h4 {
-    font-size: mobile-vw(16px);
-    line-height: 1.25;
-    letter-spacing: 0.5px;
-    @include desktop {
-      font-size: desktop-vw(30.77px);
-    }
-  }
-
-  .title {
-    margin-right: mobile-vw(44px);
-
-    @include desktop {
-      margin-right: 0;
-    }
-
-    h4 {
-      font-size: mobile-vw(32px);
-
-      @include desktop {
-        font-size: desktop-vw(67.77px);
-      }
-
-      &:nth-of-type(2) {
-        color: var(--secondary-variant);
-      }
-    }
-  }
-}
-
-.link-wrap {
-  grid-column: 1/ 4;
-
-  @include desktop {
-    grid-column: 9 / 11;
-  }
-}
-
-.support-wrap {
-  grid-column: 4 / -1;
-
-  @include desktop {
-    grid-column: 11 / -1;
-  }
-
-  a {
-    text-transform: capitalize;
-  }
-}
-
-.field-wrap {
-  display: flex;
-  justify-content: space-between;
-  margin-top: mobile-vw(24px);
-  position: relative;
-  border-bottom: solid 1px var(--secondary-variant);
-  width: 100%;
-  @include desktop {
-    margin-top: desktop-vw(48px);
-  }
-  input {
+  .socials,
+  .support {
     display: flex;
-    align-items: center;
-
-    @include desktop {
-      width: desktop-vw(800px);
-      font-size: desktop-vw(19px);
-      line-height: 25px;
-      padding: desktop-vw(1px) desktop-vw(8px);
-    }
-
-    &::placeholder {
-      text-transform: capitalize;
-    }
-  }
-
-  button {
-    display: flex;
-    align-items: flex-end;
-
-    width: mobile-vw(24px);
-    height: mobile-vw(24px);
+    width: fit-content;
+    gap: mobile-vw(32px);
     svg {
-      width: mobile-vw(24px);
+      display: inline-block;
+      fill: var(--secondary-variant);
       height: mobile-vw(24px);
-    }
-    stroke: var(--tertiary-variant);
-
-    @include desktop {
-      display: flex;
-      align-items: flex-end;
-
-      width: desktop-vw(24px);
-      height: desktop-vw(24px);
-      svg {
-        width: desktop-vw(24px);
-        height: desktop-vw(24px);
-      }
-      stroke: var(--tertiary-variant);
+      width: mobile-vw(24px);
     }
   }
-}
 
-.socials-cont {
-  height: 24px;
-  color: var(--tertiary-variant);
-  ul {
-    @include mobile {
-      margin-top: mobile-vw(16px);
-    }
-    display: flex;
-    gap: mobile-vw(8px);
-
-    @include desktop {
-      gap: desktop-vw(24px);
-    }
-    li {
-      position: relative;
-      height: 24px;
-      width: 24px;
-
-      svg {
-        height: 24px;
-        fill: var(--tertiary-variant);
-      }
-    }
-
-    li:nth-of-type(1) {
-      aspect-ratio: 12 / 23;
-      width: auto;
-      height: 24px;
-    }
-    li:nth-of-type(2) {
-      aspect-ratio: 29 / 28;
-      width: auto;
-      height: 24px;
-    }
-    li:nth-of-type(3) {
-      aspect-ratio: 15.1 / 12.8;
-      width: auto;
-      height: 24px;
-    }
-    li:nth-of-type(4) {
-      aspect-ratio: 546.12 / 384;
-      width: auto;
-      height: 24px;
+  .copy-right {
+    justify-self: center;
+  }
+  @include mobile {
+    .copy-right {
+      order: 3;
     }
   }
-}
-
-.image {
-  position: relative;
-  aspect-ratio: 3138/854;
-  width: 100%;
-  height: auto;
+  @include desktop {
+    div {
+      grid-column: span 4;
+    }
+    .socials,
+    .support {
+      gap: desktop-vw(32px);
+      svg {
+        display: inline-block;
+        height: desktop-vw(32px);
+        width: desktop-vw(32px);
+      }
+    }
+    .socials {
+      justify-self: flex-end;
+    }
+  }
 }

@@ -11,6 +11,7 @@ export default function Home({ children }: { children: ReactNode }) {
   const root = useRef<HTMLDivElement>(null!);
 
   useIsomorphicLayoutEffect(() => {
+    
     const mm = gsap.matchMedia(root);
 
     mm.add('(min-width: 849px)', () => {

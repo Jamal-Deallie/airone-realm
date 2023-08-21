@@ -23,7 +23,7 @@
 }
 .inner {
   position: relative;
-  height: desktop-vw(600px);
+  height: mobile-vw(275px);
   @include desktop {
     height: desktop-vw(600px);
     h1 {
@@ -36,7 +36,7 @@
 
 .image {
   aspect-ratio: 937/752;
-  height: desktop-vw(600px);
+  height: mobile-vw(275px);
   width: auto;
   img {
     width: 100%;
@@ -44,9 +44,16 @@
     object-fit: cover;
     object-position: center center;
   }
+
+  @include desktop {
+    height: desktop-vw(600px);
+  }
 }
 
 .btn-cont {
   position: relative;
-  width: fit-content;
+  width: 100%;
+  @include desktop {
+    @include flexbox($justifyContent: center);
+  }
 }

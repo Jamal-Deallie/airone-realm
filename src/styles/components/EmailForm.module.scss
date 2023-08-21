@@ -1,6 +1,5 @@
 @import './../base/functions';
 
-
 .email-input {
   display: flex;
   border: 1px solid var(--secondary-variant);
@@ -10,9 +9,10 @@
     width: 100%;
     text-transform: capitalize;
     color: var(--secondary-variant);
-
+    font-size: mobile-vw(16px);
     &::placeholder {
       color: var(--secondary-variant);
+      font-size: mobile-vw(16px);
     }
   }
   button {
@@ -40,6 +40,13 @@
       width: desktop-vw(56px);
       span {
         font-size: desktop-vw(24px);
+      }
+    }
+
+    input {
+      font-size: desktop-vw(16px);
+      &::placeholder {
+        font-size: desktop-vw(16px);
       }
     }
   }
