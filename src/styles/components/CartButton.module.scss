@@ -2,16 +2,21 @@
 
 .cart-btn {
   @include flexbox($justifyContent: center, $alignItems: center);
+  border-radius: 50%;
+  background: var(--secondary-variant);
+  height: mobile-vw(32px);
+  width: mobile-vw(32px);
+  svg {
+    aspect-ratio: 576/512;
+    width: mobile-vw(20px);
+    height: auto;
+    fill: var(--tertiary-variant);
+  }
   @include desktop {
-    background: #000;
-    height: desktop-vw(64px);
-    width: desktop-vw(64px);
-    border-radius: 50%;
+    height: desktop-vw(48px);
+    width: desktop-vw(48px);
     svg {
-      aspect-ratio: 576/512;
-      width: desktop-vw(32px);
-      height: auto;
-      fill: var(--tertiary-variant);
+      width: desktop-vw(24px);
     }
   }
 }

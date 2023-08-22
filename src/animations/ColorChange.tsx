@@ -7,7 +7,7 @@ export default function Home({ children }: { children: ReactNode }) {
   const colors = ['#6384DD', '#6fb936', '#ccc', '#6fb936'];
   const textColor = ['#000', '#fff'];
   const prevColor = ['#fff', '#000'];
-  const bgColors = ['#C198F1', '#6fb936', '#ccc', '#6fb936'];
+  const bgColors = ['#C198F1', '#6fb936', '#ccc', '#6384DD'];
   const root = useRef<HTMLDivElement>(null!);
 
   useIsomorphicLayoutEffect(() => {

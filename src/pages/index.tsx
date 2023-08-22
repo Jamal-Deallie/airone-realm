@@ -2,11 +2,12 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Hero from '@/containers/Hero';
 import Intro from '@/containers/Intro';
-import Clients from '@/containers/Clients';
+import CTA from '@/containers/CTA';
 import ColorChange from '@/animations/ColorChange';
 import Services from '@/containers/Services';
 import Categories from '@/components/ServiceCategory';
 import Layout from '@/components/Layout';
+import Pricing from '@/containers/Pricing';
 
 export default function Home() {
   return (
@@ -26,6 +27,12 @@ export default function Home() {
           <Categories />
         </div>
         <Services />
+        <div className='sections'>
+          <Pricing />
+        </div>
+        <div>
+          <CTA />
+        </div>
       </ColorChange>
     </Layout>
   );

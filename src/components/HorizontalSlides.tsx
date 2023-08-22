@@ -101,7 +101,7 @@ export default function HorizontalLoop() {
   }, []);
 
   return (
-    <div ref={root} className={cn(styles['container'], 'pt-nav-height')}>
+    <div ref={root} className={styles['container']}>
       <div
         className={cn(
           styles['purple'],
@@ -122,10 +122,16 @@ export default function HorizontalLoop() {
           </p>
         </div>
       </div>
-      <div className={cn(styles['red'], styles['panel'], 'panel')}>
+      <div
+        className={cn(styles['red'], styles['panel'], 'panel pt-nav-height')}>
         ONE <div className={cn(styles['box-1'], 'box-1')}>box-1</div>
       </div>
-      <div className={cn(styles['purple'], styles['panel'], 'panel')}>
+      <div
+        className={cn(
+          styles['purple'],
+          styles['panel'],
+          'panel pt-nav-height'
+        )}>
         TWO <div className={cn(styles['box-2'], 'box-2')}>box-2</div>
       </div>
       <div
@@ -134,9 +140,7 @@ export default function HorizontalLoop() {
           styles['panel'],
           'panel grid-inner py-lg-180'
         )}>
-        <div className={cn(styles['vid-cont'], 'vid')}>
-          <Video />
-        </div>
+        <div className={cn(styles['box-1'], 'box-3')}>box-1</div>
       </div>
     </div>
   );
