@@ -92,11 +92,11 @@
 }
 
 .primary-variant {
-  background-color: var(--secondary-variant);
-  color: var(--primary-variant);
+  background-color: var(--tertiary-variant);
+  color: var(--tertiary-variant);
   border: 2px solid var(--primary-variant);
   &:hover {
-    color: var(--tertiary-variant);
+    color: var(--primary-variant);
   }
   &::before,
   &::after {
@@ -110,7 +110,7 @@
 
   &::before {
     content: '';
-    background: var(--tertiary-variant);
+    background: var(--primary-variant);
     z-index: 1;
     width: 160%;
     left: -10%;
@@ -124,7 +124,7 @@
 }
 .secondary-variant {
   background-color: var(--tertiary-variant);
-  color: var(--primary-variant);
+  color: var(--tertiary-variant);
   border: 2px solid var(--secondary-variant);
 
   &:hover {
@@ -165,4 +165,8 @@
     color: var(--tertiary-variant);
     border: 2px solid var(--tertiary-variant);
   }
+}
+
+.full {
+  min-width: 100%;
 }

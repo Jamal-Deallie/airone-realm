@@ -1,0 +1,60 @@
+@use '../base/functions' as *;
+
+.team-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card {
+  border-radius: 1vw;
+  overflow: hidden;
+}
+
+.inner {
+  margin-inline: auto;
+}
+
+.image {
+  position: relative;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  width: 100%;
+  border-radius: 1vw;
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+
+.overlay {
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.team-info {
+  position: relative;
+  z-index: 3;
+}
+
+.icons {
+  @include flexbox($alignItems: center);
+  gap: mobile-vw(4px);
+  span {
+    display: block;
+  }
+  path {
+    fill: var(--primary-variant);
+  }
+  @include desktop {
+    gap: desktop-vw(12px);
+  }
+
+  svg {
+    width: desktop-vw(32px);
+  }
+}

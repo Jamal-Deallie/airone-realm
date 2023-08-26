@@ -1,15 +1,12 @@
 import '@/styles/base/globals.scss';
+import { useEffect } from 'react';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { useLenis } from '@studio-freight/react-lenis';
 import type { AppProps } from 'next/app';
-import { ReactLenis, useLenis } from '@studio-freight/react-lenis';
-import { useEffect, useRef } from 'react';
+import SplitText from 'gsap/dist/SplitText';
 import gsap from 'gsap';
 //@ts-ignore
 import Tempus from '@studio-freight/tempus';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import SplitText from 'gsap/dist/SplitText';
-import Layout from '@/components/Layout';
-
-
 
 if (typeof window !== 'undefined') {
   // reset scroll position
@@ -20,7 +17,6 @@ if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger, SplitText);
   //@ts-ignore
   ScrollTrigger.clearScrollMemory('manual');
-  ScrollTrigger.defaults({ markers: process.env.NODE_ENV === 'development' });
 
   // merge rafs
   gsap.ticker.lagSmoothing(0);
@@ -34,11 +30,5 @@ export default function App({ Component, pageProps }: AppProps) {
   const lenis = useLenis(ScrollTrigger.update);
   useEffect(ScrollTrigger.refresh, [lenis]);
 
-  return (
-    // <div className={`${inter.variable} ${myFont.variable} }`}>
-
-      <Component {...pageProps} />
-
-    // </div>
-  );
+  return <Component {...pageProps} />;
 }

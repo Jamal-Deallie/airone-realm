@@ -14,45 +14,63 @@
   }
 }
 
-.title {
-  position: relative;
-  // max-width: mobile-vw(400px);
-  // @include desktop {
-  //   max-width: desktop-vw(1000px);
-  // }
-}
-.inner {
-  position: relative;
-  height: mobile-vw(275px);
+.vid {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  // clip-path: polygon(50% 0%, 50% 0%, 50% 100%, 50% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  &:after {
+    content: '';
+    z-index: 2;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+    background: radial-gradient(transparent 0%, rgba(0, 0, 0, 0.5) 100%);
+    bottom: 0;
+    left: 0;
+  }
+  video {
+    position: relative;
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+  @include mobile {
+    video {
+      aspect-ratio: 3/5;
+      height: auto;
+      width: 100%;
+    }
+  }
   @include desktop {
-    height: desktop-vw(600px);
-    h1 {
-      div:nth-of-type(5) {
-        z-index: 2;
-      }
+    aspect-ratio: 15/9;
+    video {
+      aspect-ratio: 15/9;
     }
   }
 }
 
-.image {
-  aspect-ratio: 937/752;
-  height: mobile-vw(275px);
-  width: auto;
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center center;
-  }
-
-  @include desktop {
-    height: desktop-vw(600px);
-  }
+// .title {
+//   position: relative;
+//   max-width: mobile-vw(400px);
+//   @include desktop {
+//     max-width: desktop-vw(1000px);
+//   }
+// }
+.inner {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
 }
 
 .btn-cont {
   position: relative;
   width: 100%;
+  height: fit-content;
+  opacity: 1;
   @include desktop {
     @include flexbox($justifyContent: center);
   }

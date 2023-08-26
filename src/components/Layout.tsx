@@ -24,19 +24,6 @@ const DynamicNavbar = dynamic(() => import('@/components/Navbars'), {
 });
 
 export default function Layout({ children }: { children: ReactNode }) {
-  const lenis = useLenis();
-
-  useEffect(() => {
-    function onHashChangeStart(url: string) {
-      url = '#' + url.split('#').pop();
-      lenis.scrollTo(url);
-    }
-    Router.events.on('hashChangeStart', onHashChangeStart);
-    return () => {
-      Router.events.off('hashChangeStart', onHashChangeStart);
-    };
-  }, [lenis]);
-
   return (
     <Lenis root>
       <div className={cn(styles['layout'], inter.variable, rockets.variable)}>

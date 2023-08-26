@@ -10,7 +10,11 @@ const UserSchema = new Schema(
       type: String,
       required: true,
     },
-    name: {
+    firstName: {
+      type: String,
+      required: true,
+    },
+    lastName: {
       type: String,
       required: true,
     },
@@ -75,7 +79,8 @@ export const auth = lucia({
   getUserAttributes: data => {
     return {
       username: data.username,
-      name: data.name,
+      firstName: data.firstName,
+      lastName: data.lastName,
     };
   },
 });

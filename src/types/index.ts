@@ -5,7 +5,7 @@ interface IBaseButton {
   size?: 'sm' | 'md' | 'lg' | 'xlg';
   classes?: string;
   variant?: string;
-  block?: boolean;
+  full?: boolean;
 }
 export interface ILinkButtonProps extends IBaseButton, LinkProps {
   href: string;

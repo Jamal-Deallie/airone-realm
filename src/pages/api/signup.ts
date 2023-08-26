@@ -8,10 +8,11 @@ export default async function handler(
   res: NextApiResponse
 ) {
   if (req.method !== 'POST') return res.status(405);
-  const { username, name, password } = req.body as {
+  const { username, firstName, lastName, password } = req.body as {
     username: unknown;
     password: unknown;
-    name: unknown;
+    firstName: unknown;
+    lastName: unknown;
   };
   // basic check
 
@@ -24,9 +25,22 @@ export default async function handler(
       error: 'Invalid username',
     });
   }
-  if (typeof name !== 'string' || name.length < 1 || name.length > 31) {
+  if (
+    typeof firstName !== 'string' ||
+    firstName.length < 1 ||
+    firstName.length > 31
+  ) {
     return res.status(400).json({
-      error: 'Invalid name',
+      error: 'Invalid First Name',
+    });
+  }
+  if (
+    typeof lastName !== 'string' ||
+    lastName.length < 1 ||
+    lastName.length > 31
+  ) {
+    return res.status(400).json({
+      error: 'Invalid Last Name',
     });
   }
   if (
@@ -48,13 +62,14 @@ export default async function handler(
       },
       attributes: {
         username,
-        name,
+        firstName,
+        lastName,
       },
     });
 
     const session = await auth.createSession({
       userId: user.userId,
-      attributes: { username, name },
+      attributes: { username, firstName },
     });
     const authRequest = auth.handleRequest({
       req,

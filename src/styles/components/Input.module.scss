@@ -3,7 +3,7 @@
 
 .input {
   min-width: 100%;
-  color: var(--primary-variant);
+  color: var(--secondary-variant);
   padding: mobile-vw(4px) mobile-vw(4px);
   font-family: var(--body-font), sans-serif;
   font-size: mobile-vw(16px);
@@ -11,18 +11,14 @@
   font-weight: 300;
   border: solid 2.5px var(--secondary-variant);
   outline: none;
-
   line-height: 1;
   flex-shrink: 0;
-  &::placeholder {
-    color: rgb(133, 133, 133);
-    font-size: mobile-vw(16px);
-  }
+
   &:hover {
-    border: solid 2.5px var(--primary-variant);
+    border: solid 2.5px var(--tertiary-variant);
   }
   &:focus {
-    border: solid 2.5px var(--primary-variant);
+    border: solid 2.5px var(--tertiary-variant);
   }
   &[type='text'] {
     text-transform: capitalize;

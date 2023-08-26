@@ -4,14 +4,15 @@
   cursor: pointer;
   white-space: nowrap;
   position: relative;
-  font-family: var(--body-font);
+  font-family: var(--heading-font);
   font-size: mobile-vw(16px);
-  font-weight: 500;
-  text-transform: capitalize;
+  font-weight: bold;
+  text-transform: uppercase;
   color: var(--secondary-variant);
 
   @include desktop {
-    font-size: desktop-vw(21px);
+    font-size: desktop-vw(25px);
+    letter-spacing: 0.025em;
   }
   &:after {
     content: '';
@@ -71,7 +72,7 @@
     position: absolute;
     width: 100%;
     height: 1px;
-    background:var(--secondary-variant);
+    background: var(--secondary-variant);
     top: 100%;
     left: 0;
     pointer-events: none;

@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "title": "SINGLE CLASS",
+    "price": "$30",
+    "subheader": "Valid at ALL Refresh Studios",
+    "type": "class"
+  },
+  {
+    "id": 2,
+    "title": "NEW STUDENT 10-DAYS UNLIMITED",
+    "price": "$30",
+    "subheader": "Valid for 10 days of unlimited yoga at ALL Refresh Studios",
+    "type": "class"
+  },
+  {
+    "id": 3,
+    "title": "1 MONTH UNLIMITED",
+    "price": "$299",
+    "subheader": "Valid for 1 month of unlimited yoga at ALL Refresh Studios",
+    "type": "class"
+  },
+  {
+    "id": 4,
+    "title": "MONTHLY 4x/ MONTH",
+    "price": "$99",
+    "subheader": "Valid at ALL Refresh Studios. Includes 10% Off Retail 15% Off Events 1 Guest Pass Per Month",
+    "type": "membership"
+  },
+  {
+    "id": 5,
+    "title": "MONTHLY 8x/ MONTH",
+    "price": "$175",
+    "subheader": "Refresh is my happy place! The community is supportive, and the meditation classes have helped me manage stress like never before.",
+    "type": "membership"
+  },
+  {
+    "id": 6,
+    "title": "PREMIUM MONTHLY STUDIO",
+    "price": "$199",
+    "subheader": "Valid at ALL Refresh Studios. Includes 10% Off Retail 15% Off Events 1 Guest Pass Per Month",
+    "type": "membership"
+  },
+  {
+    "id": 7,
+    "title": "5 CLASS PACK",
+    "price": "$140",
+    "subheader": "Valid at ALL Refresh Studios",
+    "type": "package"
+  },
+  {
+    "id": 8,
+    "title": "10 CLASS PACK",
+    "price": "$230",
+    "subheader": "Valid at ALL Refresh Studios",
+    "type": "package"
+  }
+]

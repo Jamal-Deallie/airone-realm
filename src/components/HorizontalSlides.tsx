@@ -102,45 +102,59 @@ export default function HorizontalLoop() {
 
   return (
     <div ref={root} className={styles['container']}>
-      <div
-        className={cn(
-          styles['purple'],
-          styles['panel'],
-          'panel grid-inner py-lg-180'
-        )}>
-        <div className={styles['vid-cont']}>
-          <Video dimensions='9/16' />
-        </div>
-        <div className={styles['desc']}>
-          <h1 className='title-lg'>Vinayasa Yoga</h1>
-          <p className='txt-lg mt-lg-64'>
-            Refresh Studio offers invigorating Vinyasa Yoga classes, focusing on
-            synchronized breath and dynamic postures. Connect fluidly between
-            movements, enhancing flexibility, strength, and mental clarity.
-            Suitable for all levels, it harmonizes body and mind, promoting
-            holistic well-being in a serene and inclusive environment.
-          </p>
+      <div className={cn(styles['purple'], styles['panel'], 'panel  ')}>
+        <div className='grid-inner py-lg-180'>
+          <div className={styles['vid-cont']}>
+            <Video dimensions='3/4' />
+          </div>
+          <div className={styles['desc']}>
+            <h1 className='title-lg'>Vinayasa Yoga</h1>
+            <p className='txt-lg mt-lg-64'>
+              Refresh Studio offers invigorating Vinyasa Yoga classes, focusing
+              on synchronized breath and dynamic postures. Connect fluidly
+              between movements, enhancing flexibility, strength, and mental
+              clarity. Suitable for all levels, it harmonizes body and mind,
+              promoting holistic well-being in a serene and inclusive
+              environment.
+            </p>
+          </div>{' '}
         </div>
       </div>
-      <div
-        className={cn(styles['red'], styles['panel'], 'panel pt-nav-height')}>
-        ONE <div className={cn(styles['box-1'], 'box-1')}>box-1</div>
+      <div className={cn(styles['purple'], styles['panel'], 'panel   ')}>
+        <div className='grid-inner py-lg-180'>
+          <div className={styles['vid-cont']}>
+            <Video dimensions='3/4' />
+          </div>
+          <div className={styles['desc']}>
+            <h1 className='title-lg'>Vinayasa Yoga</h1>
+            <p className='txt-lg mt-lg-64'>
+              Refresh Studio offers invigorating Vinyasa Yoga classes, focusing
+              on synchronized breath and dynamic postures. Connect fluidly
+              between movements, enhancing flexibility, strength, and mental
+              clarity. Suitable for all levels, it harmonizes body and mind,
+              promoting holistic well-being in a serene and inclusive
+              environment.
+            </p>
+          </div>{' '}
+        </div>
       </div>
-      <div
-        className={cn(
-          styles['purple'],
-          styles['panel'],
-          'panel pt-nav-height'
-        )}>
-        TWO <div className={cn(styles['box-2'], 'box-2')}>box-2</div>
-      </div>
-      <div
-        className={cn(
-          styles['orange'],
-          styles['panel'],
-          'panel grid-inner py-lg-180'
-        )}>
-        <div className={cn(styles['box-1'], 'box-3')}>box-1</div>
+      <div className={cn(styles['purple'], styles['panel'], 'panel ')}>
+        <div className='grid-inner  py-lg-180'>
+          <div className={styles['vid-cont']}>
+            <Video dimensions='3/4' />
+          </div>
+          <div className={styles['desc']}>
+            <h1 className='title-lg'>Vinayasa Yoga</h1>
+            <p className='txt-lg mt-lg-64'>
+              Refresh Studio offers invigorating Vinyasa Yoga classes, focusing
+              on synchronized breath and dynamic postures. Connect fluidly
+              between movements, enhancing flexibility, strength, and mental
+              clarity. Suitable for all levels, it harmonizes body and mind,
+              promoting holistic well-being in a serene and inclusive
+              environment.
+            </p>
+          </div>{' '}
+        </div>
       </div>
     </div>
   );

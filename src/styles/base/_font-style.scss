@@ -19,10 +19,10 @@ $font-sizes: (
 h1,
 h2 {
   font-family: var(--heading-font);
-
   font-style: normal;
   line-height: calc(2px + 2ex + 2px);
   text-transform: uppercase;
+
 }
 
 h3,
@@ -166,16 +166,9 @@ span {
   }
 }
 
-.subheader {
-  color: var(--tertiary-variant);
-  font-weight: 400;
-  grid-column: 1/ -1;
-}
-
 .tac {
   text-align: center;
 }
-
 
 .light {
   font-weight: 400;
@@ -183,4 +176,12 @@ span {
 
 .bold {
   font-weight: 600;
+}
+
+.heading-ft {
+  font-family: var(--heading-font), sans-serif;
+}
+
+.body-ft {
+  font-family: var(--body-font), sans-serif;
 }

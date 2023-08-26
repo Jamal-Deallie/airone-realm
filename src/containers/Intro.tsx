@@ -12,8 +12,8 @@ export default function Intro() {
           <div className={styles['desc']}>
             <SplitAngled>
               <p className='title-lg splits'>
-                Fostering wellness through mindful movement, uniting body, mind,
-                and spirit
+                Our mission is to foster wellness through mindful movement,
+                uniting body, mind, and spirit
               </p>
             </SplitAngled>
           </div>

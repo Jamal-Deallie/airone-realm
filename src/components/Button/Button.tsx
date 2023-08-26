@@ -10,16 +10,17 @@ function ButtonComponent({
   children,
   type,
   disabled,
+  full,
   ...props
 }: IButtonProps) {
   const styleClasses = cn(
     classes,
     styles['base'],
     styles[`${size}`],
-    styles[`${variant}-variant`]
-    // {
-    //   [styles['base-disabled']]: disabled === true,
-    // }
+    styles[`${variant}-variant`],
+    {
+      [styles['full']]: full === true,
+    }
   );
 
   return (

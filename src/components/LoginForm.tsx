@@ -60,7 +60,7 @@ export default function LoginForm() {
   return (
     <form
       className={styles['form-cont']}
-      action='/api/signin'
+      action='/api/login'
       onSubmit={async e => {
         e.preventDefault();
         const formData = new FormData(e.currentTarget);

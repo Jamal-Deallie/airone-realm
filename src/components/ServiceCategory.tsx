@@ -1,7 +1,10 @@
-import React from 'react';
+import { useRef } from 'react';
 import Image from 'next/image';
 import styles from '@/styles/containers/Categories.module.scss';
 import cn from 'classnames';
+import { useIsomorphicLayoutEffect } from '@/hooks/useIsomorphicLayout';
+import gsap from 'gsap';
+import SplitText from 'gsap/dist/SplitText';
 
 export default function Categories({
   reverse = false,
@@ -10,34 +13,70 @@ export default function Categories({
   desc,
 }: {
   reverse?: boolean;
-  src?: string;
-  title?: string;
-  desc?: string;
+  src: string;
+  title: string;
+  desc: string;
 }) {
+  const root = useRef<HTMLDivElement>(null!);
+  const tl = useRef<gsap.core.Timeline>(null!);
+
+  useIsomorphicLayoutEffect(() => {
+    const mm = gsap.matchMedia(root);
+
+    mm.add('(min-width: 850px)', () => {
+      tl.current = gsap.timeline({
+        scrollTrigger: {
+          start: 'top 25%',
+          end: 'bottom bottom',
+          trigger: root.current,
+        },
+      });
+
+      const split = new SplitText('.title-lg', { type: 'words' });
+      tl.current
+        .from(split.words, {
+          opacity: 0,
+          y: 50,
+          duration: 1.25,
+          ease: 'back',
+          stagger: 0.25,
+        })
+        .from(
+          '.cat-desc',
+          { opacity: 0, ease: 'sine.in', duration: 1.25 },
+          '-=1.75'
+        )
+        .from(
+          '.cat-img',
+          { opacity: 0, ease: 'sine.in', duration: 1.5 },
+          '-=1.75'
+        );
+    });
+
+    return () => {
+      mm.revert();
+    };
+  }, []);
+
   return (
     <div
+      ref={root}
       className={cn(
-        'pb-lg-128 pb-sm-64 main',
+        'py-lg-180 pb-sm-64 main',
         reverse ? styles['cat-reverse'] : styles['cat']
       )}>
       <div className='grid-inner'>
-        <div className={cn(styles['desc'], 'pt-lg-180')}>
-          <h1 className='title-lg'>Healthy</h1>
-          <p className='txt-md pt-lg-96 pt-sm-32'>
-            Sodales ut eu sem integer vitae justo eget magna fermentum iaculis
-            eu non diam phasellus vestibulum lorem sed risus ultricies tristique
-            nulla aliquet enim tortor at auctor urna nunc id cursus metus
-            aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices
-            sagittis orci a scelerisque purus semper eget duis at tellus at urna
-            condimentum mattis pellentesque id nibh tortor id
-          </p>
+        <div className={cn(styles['desc'], 'pt-lg-24')}>
+          <div className={styles['title']}>
+            <h1 className='title-lg'>{title}</h1>
+          </div>
+          <p className='txt-md pt-lg-64 pt-sm-32 cat-desc'>{desc}</p>
         </div>
-        <aside className={styles['img']}>
+        <aside className={cn(styles['img'], 'cat-img')}>
           <Image
-            src='/images/cat.webp'
-            alt='Hero'
+            src={src}
+            alt={title}
             fill
-            quality={90}
             sizes='(min-width: 850px) 75vw, 100vw, (max-width: 849px) 33vw'
           />
         </aside>

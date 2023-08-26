@@ -37,7 +37,7 @@ export default function SplitAngled({
         gsap.set(root.current, { overflow: 'hidden' });
 
         const splitChild = new SplitText('.splits', {
-          type: 'words',
+          type: 'lines',
           wordsClass: 'split-child',
         });
 
@@ -54,16 +54,17 @@ export default function SplitAngled({
         //   stagger: 0.2,
         // });
         tl.current
-          .from(splitChild.words, {
+          .from(splitChild.lines, {
             yPercent: 100,
             duration: 1.5,
             ease: 'power4.out',
+            stagger: 0.2,
           })
           .to(
             splitParent.lines,
             {
               clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%',
-              stagger: 0.1,
+              stagger: 0.2,
             },
             0
           );

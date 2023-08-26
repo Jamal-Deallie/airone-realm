@@ -8,11 +8,11 @@ type NavLinkProps = LinkProps & {
   children: ReactNode;
   url: string;
   key?: string | number;
-  cln?: string;
+  classes?: string;
 };
 
 export default function NavLink({
-  cln,
+  classes,
   children,
   url,
   ...props
@@ -26,7 +26,7 @@ export default function NavLink({
       className={cn(
         [styles.link],
         pathname === url ? [styles.active] : null,
-        cln
+        classes
       )}>
       {children}
     </Link>

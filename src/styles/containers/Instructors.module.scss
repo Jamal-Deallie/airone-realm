@@ -1,0 +1,20 @@
+@import './../base/functions';
+
+.title {
+  grid-column: 1/-1;
+  justify-self: center;
+  @include desktop {
+    width: desktop-vw(900px);
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  gap: mobile-vw(48px) mobile-vw(24px);
+
+  @include desktop {
+    gap: desktop-vw(64px) desktop-vw(48px);
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  }
+}

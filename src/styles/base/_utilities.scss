@@ -95,7 +95,10 @@ html.has-scroll-smooth {
   }
 }
 
-.split-parent {
+.split-angle {
   clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 100%);
-  border: 2px solid yellow;
+}
+
+.split-parent {
+  overflow: hidden;
 }

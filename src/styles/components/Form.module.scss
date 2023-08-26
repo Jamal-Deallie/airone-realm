@@ -13,3 +13,14 @@
     }
   }
 }
+
+.name-field {
+  @include desktop {
+    display: flex;
+
+    div {
+      flex: 1;
+    }
+    gap: desktop-vw(16px);
+  }
+}

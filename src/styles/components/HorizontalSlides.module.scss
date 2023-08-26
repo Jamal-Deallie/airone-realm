@@ -19,6 +19,8 @@
 .panel {
   width: 100vw;
   height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 .red {
@@ -49,6 +51,6 @@
   grid-column: 1/5;
 }
 
-.desc{
+.desc {
   grid-column: 6/-1;
 }

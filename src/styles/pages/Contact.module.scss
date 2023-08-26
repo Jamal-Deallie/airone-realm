@@ -1,0 +1,19 @@
+@import './../base/functions';
+
+.title,
+.desc .form-wrap {
+  grid-column: 1/-1;
+}
+
+.title,
+.desc {
+  @include desktop {
+    grid-column: span 5;
+  }
+}
+
+.form-wrap {
+  @include desktop {
+    grid-column: 7/-1;
+  }
+}

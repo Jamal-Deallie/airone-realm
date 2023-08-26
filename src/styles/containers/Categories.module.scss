@@ -1,5 +1,7 @@
 @import './../base/functions';
-
+.title {
+  overflow: hidden;
+}
 .cat {
   .desc,
   .img {
@@ -42,6 +44,6 @@
   }
 
   @include desktop {
-    height: desktop-vw(750px);
+    height: desktop-vw(600px);
   }
 }

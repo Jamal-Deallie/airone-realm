@@ -34,184 +34,91 @@ export const supportLinks = [
   },
 ];
 
-export const clientList = [
+export const instructors = [
   {
     id: 1,
-    client: 'Coca-Cola',
+    name: 'Alice Johnson',
+    title: 'Lighting Designer',
+    position: 'Senior Architect',
+    bio: 'Lumos has been the canvas for my creativity, allowing me to craft lighting designs that leave a lasting impact on spaces and people.',
   },
   {
     id: 2,
-    client: 'Google',
+    name: 'Michael Smith',
+    title: 'Sustainability Specialist',
+    position: 'Sustainability Consultant',
+    bio: "At Lumos, I'm proud to contribute to projects that prioritize sustainability, combining innovation and eco-consciousness for a brighter future.",
   },
   {
     id: 3,
-    client: 'Dewalt',
+    name: 'Emily Williams',
+    title: 'Creative Illuminator',
+    position: 'Project Manager',
+    bio: 'Working at Lumos sparks my imagination, bringing my design concepts to life, and witnessing the transformation of spaces is truly fulfilling.',
   },
   {
     id: 4,
-    client: 'Nette',
+    name: 'Daniel Brown',
+    title: 'Lighting Guru',
+    position: 'Interior Designer',
+    bio: 'As a Lighting Guru, Lumos empowers me to create harmonious lighting schemes that evoke emotions and elevate interiors to new heights.',
   },
   {
     id: 5,
-    client: 'AMC',
+    name: 'Sophia Miller',
+    title: 'Light Magician',
+    position: 'Design Director',
+    bio: 'Being a Light Magician at Lumos is a dream come true, where I can weave magic through light and redefine the perception of spaces.',
   },
   {
     id: 6,
-    client: 'Mercedes',
+    name: 'Oliver Lee',
+    title: 'Illumination Engineer',
+    position: 'Electrical Engineer',
+    bio: 'As an Illumination Engineer at Lumos, I enjoy the perfect blend of technology and art, creating lighting wonders that amaze and inspire.',
   },
   {
     id: 7,
-    client: 'Fox',
+    name: 'Emma Carter',
+    title: 'Lighting Alchemist',
+    position: 'Lighting Consultant',
+    bio: 'Being a Lighting Alchemist at Lumos allows me to transform spaces into enchanting realms, evoking emotions through the alchemy of light.',
   },
   {
     id: 8,
-    client: 'KFC',
-  },
-  {
-    id: 9,
-    client: 'NBA',
-  },
-  {
-    id: 10,
-    client: 'Amazon',
-  },
-  {
-    id: 11,
-    client: 'NBC',
-  },
-  {
-    id: 12,
-    client: 'Visa',
-  },
-  {
-    id: 13,
-    client: 'LA Times',
-  },
-  {
-    id: 14,
-    client: 'Minecraft',
-  },
-  {
-    id: 15,
-    client: 'Sony',
-  },
-  {
-    id: 16,
-    client: 'Ikea',
-  },
-  {
-    id: 17,
-    client: 'Doom',
-  },
-  {
-    id: 18,
-    client: 'MTV',
-  },
-  {
-    id: 19,
-    client: 'UFC',
-  },
-  {
-    id: 20,
-    client: 'Puma',
-  },
-  {
-    id: 21,
-    client: 'Disocvery',
-  },
-  {
-    id: 22,
-    client: 'Marvel',
-  },
-  {
-    id: 23,
-    client: 'IFC',
-  },
-  {
-    id: 24,
-    client: 'Netflix',
-  },
-  {
-    id: 25,
-    client: 'Sundance',
-  },
-  {
-    id: 27,
-    client: 'Voss',
-  },
-  {
-    id: 28,
-    client: 'Patreon',
-  },
-  {
-    id: 29,
-    client: 'LG',
-  },
-  {
-    id: 30,
-    client: 'HBO',
-  },
-  {
-    id: 31,
-    client: 'Pepsi',
-  },
-  {
-    id: 32,
-    client: 'Adidas',
-  },
-  {
-    id: 33,
-    client: 'Microsoft',
-  },
-  {
-    id: 34,
-    client: 'CNN',
-  },
-  {
-    id: 35,
-    client: 'Nikon',
-  },
-  {
-    id: 36,
-    client: 'Spotify',
+    name: 'Liam Anderson',
+    title: 'Lighting Visionary',
+    position: 'Lead Architect',
+    bio: 'At Lumos, my role as a Lighting Visionary fuels my passion for architectural innovation, shaping extraordinary experiences through visionary lighting design.',
   },
 ];
 
-export const services = [
+export const categories = [
   {
     id: 1,
-    service: 'creative',
-    src: 'https://res.cloudinary.com/dtwk4dm3g/image/upload/v1676674882/air_one/creative_o25q02.svg',
-    desc: 'UI & UX • Web Design • Print Design • Consulting',
+    title: 'Vinyasa Yoga',
+    desc: 'Experience the fluid grace of Vinyasa Yoga. Seamlessly link breath with dynamic movements in a harmonious sequence. Enhance flexibility, strength, and mindfulness as you flow through poses, uniting body and breath.',
+    src: '/images/cat-3.webp',
   },
+
   {
     id: 2,
-    service: 'brand',
-    src: 'https://res.cloudinary.com/dtwk4dm3g/image/upload/v1676674871/air_one/brand_vriwfq.svg',
-    desc: 'Logo & Identity • Visual language • Guidelines Design Systems',
+    title: 'Hatha Yoga',
+    desc: 'Discover balance and alignment in our Hatha Yoga class. Embrace foundational postures held to build strength and flexibility. Focus on breath and mindfulness, fostering harmony of body and mind. Cultivate a sense of calm and rejuvenation in each session.',
+    src: '/images/cat-2.webp',
   },
+
   {
     id: 3,
-    service: 'strategy',
-    src: 'https://res.cloudinary.com/dtwk4dm3g/image/upload/v1676674925/air_one/strategy_ualpci.svg',
-    desc: 'Social Media • Inbound Marketing • Copywriting • Visual Content • Campaigns',
+    title: 'Guided Meditation',
+    desc: 'Dive into tranquility with our Meditation class. Learn mindfulness techniques to quiet the mind, reduce stress, and enhance self-awareness. Guided sessions cultivate inner peace, fostering mental clarity and emotional well-being. Discover the profound benefits of stillness.',
+    src: '/images/cat-1.webp',
   },
+
   {
     id: 4,
-    service: 'web',
-    src: 'https://res.cloudinary.com/dtwk4dm3g/image/upload/v1676674917/air_one/web_z2c8ak.svg',
-    desc: 'UI & UX • Web Design • Print Design • Consulting',
-  },
-  {
-    id: 5,
-    service: 'analytics',
-    src: 'https://res.cloudinary.com/dtwk4dm3g/image/upload/v1676674871/air_one/analytics_cbyltc.svg',
-    desc: 'UI & UX • Web Design • Print Design • Consulting',
-  },
-  {
-    id: 6,
-    service: 'support',
-    src: 'https://res.cloudinary.com/dtwk4dm3g/image/upload/v1676674925/air_one/support_mxzlpl.svg',
-    desc: 'UI & UX • Web Design • Print Design • Consulting',
+    title: 'Ashtanga Yoga',
+    desc: 'Embark on a transformative journey with Ashtanga Yoga. Follow a structured sequence of postures synchronized with breath. Cultivate strength, flexibility, and inner focus. Guided by tradition, this dynamic practice empowers holistic growth and self-awareness.',
+    src: '/images/cat-4.webp',
   },
 ];
