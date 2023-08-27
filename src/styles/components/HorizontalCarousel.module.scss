@@ -1,0 +1,108 @@
+@import './../base/functions';
+
+.app {
+  position: relative;
+  width: 100%;
+  //   text-align: center;
+  //   display: flex;
+  //   justify-content: center;
+  overflow: hidden;
+  margin-inline: auto;
+  @include desktop {
+    height: desktop-vw(700px);
+    aspect-ratio: 16/9;
+    width: auto;
+    border: 1px solid var(--secondary-variant);
+  }
+}
+
+.wrapper {
+  height: desktop-vw(800px);
+  width: 100%;
+
+  position: relative;
+  display: flex;
+  overflow: hidden;
+
+  @include desktop {
+    height: desktop-vw(700px);
+    aspect-ratio: 16/9;
+    width: auto;
+  }
+}
+
+.box {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 80%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  flex-shrink: 0;
+
+  cursor: pointer;
+  @include desktop {
+    height: desktop-vw(700px);
+  }
+}
+
+.btn-cont {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+}
+.prev {
+  position: relative;
+  padding: 1rem 2rem 1rem 2rem;
+  border: none;
+  background: #555;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.next {
+  //   position: relative;
+  bottom: 10%;
+  right: 15%;
+
+  padding: 1rem 2rem 1rem 2rem;
+  border: none;
+  background: #555;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.toggle {
+  position: absolute;
+  top: 10%;
+}
+
+.show-overflow {
+  overflow: visible;
+}
+
+.image {
+  position: relative;
+  height: desktop-vw(300px);
+  width: desktop-vw(300px);
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  @include desktop {
+    height: desktop-vw(800px);
+    width: 100%;
+  }
+}

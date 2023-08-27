@@ -122,3 +122,31 @@ export const categories = [
     src: '/images/cat-4.webp',
   },
 ];
+
+export const slides = [
+  {
+    id: 1,
+    src: '/images/slide-1.webp',
+    alt: 'Slide 1'
+  },
+  {
+    id: 2,
+    src: '/images/slide-2.webp',
+    alt: 'Slide 1'
+  },
+  {
+    id: 3,
+    src: '/images/slide-3.webp',
+    alt: 'Slide 1'
+  },
+  {
+    id: 4,
+    src: '/images/slide-4.webp',
+    alt: 'Slide 1'
+  },
+  {
+    id: 5,
+    src: '/images/slide-5.webp',
+    alt: 'Slide 1'
+  },
+]

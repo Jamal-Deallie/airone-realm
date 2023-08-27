@@ -102,3 +102,8 @@ html.has-scroll-smooth {
 .split-parent {
   overflow: hidden;
 }
+
+.target.active {
+  color: white;
+  border: 2px solid white;
+}
