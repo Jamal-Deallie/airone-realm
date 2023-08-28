@@ -7,10 +7,10 @@ import styles from '@/styles/components/Button.module.scss';
 function LinkComponent({
   size,
   variant,
-  block,
   children,
   href,
   classes,
+  Ref,
 }: ILinkButtonProps) {
   const styleClasses = cn(
     classes,
@@ -20,7 +20,7 @@ function LinkComponent({
   );
 
   return (
-    <Link href={href} passHref className={styleClasses}>
+    <Link href={href} passHref className={styleClasses} ref={Ref}>
       <span>{children}</span>
     </Link>
   );

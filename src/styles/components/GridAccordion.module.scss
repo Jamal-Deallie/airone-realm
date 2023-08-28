@@ -1,0 +1,40 @@
+.accordion-content {
+  display: grid;
+  transition: grid-template-rows 500ms;
+}
+
+.content-hide {
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 500ms;
+}
+
+.content-show {
+  grid-template-rows: 1fr;
+  transition: grid-template-rows 500ms;
+}
+
+.accordion-content > div {
+  overflow: hidden;
+}
+
+.accordion-panel {
+  border: 2.5px solid;
+}
+
+.accordion-trigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 0;
+  font: inherit;
+  color: inherit;
+  width: 100%;
+  span {
+    display: block;
+    font-weight: 300;
+  }
+
+  .rotate {
+    transform: rotate(45deg);
+  }
+}

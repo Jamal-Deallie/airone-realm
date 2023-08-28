@@ -104,3 +104,8 @@ meter {
 :where(dialog:modal) {
   all: revert;
 }
+
+label {
+  margin-bottom: 0.25rem;
+  display: inline-block;
+}

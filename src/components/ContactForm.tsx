@@ -53,7 +53,12 @@ export default function ContactForm() {
           <label htmlFor='name' className='secondary-clr'>
             Name
           </label>
-          <Input type='text' {...register('name')} />
+          <Input
+            type='text'
+            {...register('name')}
+            id='name'
+            autoComplete='one-time-code'
+          />
         </div>
         {errors.name && <p className={styles.error}>{errors.name.message}</p>}
       </div>
@@ -62,27 +67,42 @@ export default function ContactForm() {
           <label htmlFor='phoneNumber' className='secondary-clr'>
             Phone Number
           </label>
-          <Input type='text' {...register('phoneNumber')} />
+          <Input
+            type='text'
+            {...register('phoneNumber')}
+            id='phoneNumber'
+            autoComplete='one-time-code'
+          />
         </div>
         {errors.phoneNumber && (
           <p className={styles.error}>{errors.phoneNumber.message}</p>
         )}
       </div>
       <div className='mt-sm-16 mt-lg-24'>
-        <label htmlFor='email' className='secondary-clr'>
-          Email
-        </label>
         <div className={styles.input}>
-          <Input type='email' {...register('email')} />
+          <label htmlFor='email' className='secondary-clr'>
+            Email
+          </label>
+          <Input
+            type='email'
+            {...register('email')}
+            id='email'
+            autoComplete='one-time-code'
+          />
         </div>
         {errors.email && <p className={styles.error}>{errors.email.message}</p>}
       </div>
       <div className='mt-sm-16 mt-lg-24'>
-        <label htmlFor='email' className='secondary-clr'>
-          Message
-        </label>
         <div className={styles.input}>
-          <TextArea {...register('message')} rows={10} />
+          <label htmlFor='message' className='secondary-clr'>
+            Message
+          </label>
+          <TextArea
+            {...register('message')}
+            rows={10}
+            id='message'
+            autoComplete='one-time-code'
+          />
         </div>
         {errors.message && (
           <p className={styles.error}>{errors.message.message}</p>

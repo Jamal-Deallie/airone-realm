@@ -1,0 +1,31 @@
+@use '../../app/base/functions' as *;
+
+.item {
+  cursor: pointer;
+  border-bottom: 2.5px solid;
+  border-left: 2.5px solid;
+  border-right: 2.5px solid;
+}
+
+.item:last-child {
+  //   border-bottom: 2.5px solid;
+}
+
+.title {
+  width: 100%;
+}
+
+.title:nth-of-type(3) {
+}
+
+.item.active .title,
+.title:hover {
+}
+
+.content {
+  height: 0;
+  overflow: hidden;
+}
+
+.content p {
+}

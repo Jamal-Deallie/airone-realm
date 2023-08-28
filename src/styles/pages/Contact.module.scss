@@ -1,19 +1,57 @@
 @import './../base/functions';
 
-.title,
-.desc .form-wrap {
-  grid-column: 1/-1;
-}
+// .title,
+// .desc .form-wrap {
+//   grid-column: 1/-1;
+// }
 
 .title,
 .desc {
+  grid-column: 1/-1;
   @include desktop {
     grid-column: span 5;
   }
 }
 
 .form-wrap {
+  grid-column: 1/-1;
   @include desktop {
     grid-column: 7/-1;
+  }
+}
+
+.contact-details {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: mobile-vw(24px);
+  @include desktop {
+    gap: desktop-vw(48px);
+  }
+}
+
+.svg-cont {
+  height: mobile-vw(16px);
+  width: mobile-vw(16px);
+  svg {
+    height: mobile-vw(16px);
+    width: mobile-vw(16px);
+  }
+  @include desktop {
+    height: desktop-vw(24px);
+    width: desktop-vw(24px);
+    svg {
+      height: desktop-vw(24px);
+      width: desktop-vw(24px);
+    }
+  }
+}
+
+.detail {
+  display: flex;
+  align-items: center;
+  gap: mobile-vw(4px);
+  @include desktop {
+    gap: desktop-vw(8px);
   }
 }

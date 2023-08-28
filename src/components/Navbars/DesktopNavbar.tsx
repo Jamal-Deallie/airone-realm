@@ -8,7 +8,6 @@ import NavLink from '@/components/NavLink';
 import CartButton from '@/components/CartButton';
 import styles from '@/styles/components/DesktopNavbar.module.scss';
 
-
 export default function DesktopNavbar() {
   const root = useRef<HTMLDivElement>(null!);
   const tl = useRef<gsap.core.Timeline>(null!);
@@ -47,7 +46,7 @@ export default function DesktopNavbar() {
               </NavLink>
             </div>
             <div className={styles['wrap-link']}>
-              <NavLink href='#' url='#'>
+              <NavLink href='/studio' url='/studio'>
                 Studio
               </NavLink>
             </div>
@@ -59,6 +58,11 @@ export default function DesktopNavbar() {
             <div className={styles['wrap-link']}>
               <NavLink href='/faqs' url='/faqs'>
                 Membership
+              </NavLink>
+            </div>
+            <div className={styles['wrap-link']}>
+              <NavLink href='/contact' url='contact'>
+                Contact
               </NavLink>
             </div>
           </div>

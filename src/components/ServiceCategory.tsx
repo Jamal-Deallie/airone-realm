@@ -11,11 +11,13 @@ export default function Categories({
   src,
   title,
   desc,
+  id,
 }: {
   reverse?: boolean;
   src: string;
   title: string;
   desc: string;
+  id: number;
 }) {
   const root = useRef<HTMLDivElement>(null!);
   const tl = useRef<gsap.core.Timeline>(null!);
@@ -72,7 +74,7 @@ export default function Categories({
           </div>
           <p className='txt-md pt-lg-64 pt-sm-32 cat-desc'>{desc}</p>
         </div>
-        <aside className={cn(styles['img'], 'cat-img')}>
+        <aside className={cn(styles[`img-${id}`], 'cat-img')}>
           <Image
             src={src}
             alt={title}

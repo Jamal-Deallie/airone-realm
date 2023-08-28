@@ -49,7 +49,7 @@ span {
 
 .txt-lg {
   letter-spacing: -0.03em;
-  font-size: desktop-vw(map-get($font-sizes, '7'));
+  font-size: mobile-vw(map-get($font-sizes, '7'));
   & .bold {
     font-weight: 500;
   }
@@ -59,7 +59,7 @@ span {
 }
 
 .txt-md {
-  font-size: mobile-vw(map-get($font-sizes, '5'));
+  font-size: mobile-vw(map-get($font-sizes, '4'));
   &.light {
     font-weight: 300;
   }
@@ -139,6 +139,7 @@ span {
   font-family: var(--heading-font), sans-serif;
   font-size: mobile-vw(map-get($font-sizes, '6'));
   line-height: 0.9;
+  letter-spacing: 0.01em;
   @include desktop {
     font-size: desktop-vw(map-get($font-sizes, '8'));
   }
@@ -154,6 +155,7 @@ span {
   font-family: var(--heading-font), sans-serif;
   font-size: mobile-vw(map-get($font-sizes, '6'));
   line-height: 1;
+  letter-spacing: 0.01em;
   @include desktop {
     font-size: desktop-vw(map-get($font-sizes, '7'));
   }

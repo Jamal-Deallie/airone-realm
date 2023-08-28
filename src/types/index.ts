@@ -10,6 +10,7 @@ interface IBaseButton {
 export interface ILinkButtonProps extends IBaseButton, LinkProps {
   href: string;
   children: ReactNode;
+  Ref?: React.Ref<HTMLAnchorElement> | null;
 }
 
 export interface IButtonProps
@@ -22,6 +23,7 @@ export interface IButtonProps
   isLoading?: boolean;
   disabled?: boolean;
   type?: 'button' | 'submit' | 'reset';
+  Ref?: React.Ref<HTMLButtonElement> | null;
 }
 
 export interface IProduct {

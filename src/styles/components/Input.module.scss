@@ -13,7 +13,7 @@
   outline: none;
   line-height: 1;
   flex-shrink: 0;
-
+  min-height: mobile-vw(40px);
   &:hover {
     border: solid 2.5px var(--tertiary-variant);
   }
@@ -26,7 +26,6 @@
 
   @include desktop {
     &[type='text'] {
-      min-height: desktop-vw(48px);
       &::placeholder {
         text-transform: capitalize;
       }
@@ -34,6 +33,7 @@
     &::placeholder {
       font-size: desktop-vw(20px);
     }
+    min-height: desktop-vw(48px);
     padding: desktop-vw(8px) desktop-vw(8px);
     font-size: desktop-vw(20px);
     min-width: 100%;
@@ -46,10 +46,3 @@
   cursor: not-allowed;
 }
 
-// .input:focus {
-//   border-color: hsl(
-//     var(--input-focus-h),
-//     var(--input-focus-s),
-//     var(--input-focus-l)
-//   );
-// }

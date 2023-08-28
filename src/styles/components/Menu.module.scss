@@ -40,6 +40,7 @@
   height: 48px;
 }
 .menu {
+
   display: none;
   top: 0;
   left: 0;
@@ -51,6 +52,7 @@
   z-index: 2;
 
   .overlay {
+    padding-top: mobile-vw(120px);
     width: 100%;
     height: 100vh;
     z-index: 3;
@@ -62,7 +64,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: mobile-vw(24px);
+    gap: mobile-vw(40px);
 
     li {
       a {
@@ -74,7 +76,7 @@
         line-height: 0.86;
         @include outline-font(var(--quaternary-variant), mobile-vw(1.75px));
         transition: all 0.3s ease-in-out;
-        font-size: mobile-vw(54.77px);
+        font-size: mobile-vw(84.77px);
       }
     }
 

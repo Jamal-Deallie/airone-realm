@@ -1,0 +1,20 @@
+@import './../base/functions';
+
+.title-cont {
+  grid-column: 1/-1;
+}
+
+.desc-cont {
+  grid-column: 1/-1;
+  @include desktop {
+    grid-column: 1/6;
+  }
+}
+
+.accordion-cont {
+  grid-column: 1/-1;
+}
+
+.accordion-wrap:not(:first-of-type) {
+  border-top: 2.5px solid;
+}

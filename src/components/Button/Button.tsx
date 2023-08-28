@@ -3,6 +3,8 @@ import cn from 'classnames';
 import styles from '@/styles/components/Button.module.scss';
 import { IButtonProps } from '@/types';
 
+export type Ref = HTMLButtonElement;
+
 function ButtonComponent({
   variant,
   classes,
@@ -11,6 +13,7 @@ function ButtonComponent({
   type,
   disabled,
   full,
+  Ref,
   ...props
 }: IButtonProps) {
   const styleClasses = cn(
@@ -24,7 +27,7 @@ function ButtonComponent({
   );
 
   return (
-    <button type={type} className={styleClasses} {...props}>
+    <button type={type} className={styleClasses} {...props} ref={Ref}>
       <span>{children}</span>
     </button>
   );

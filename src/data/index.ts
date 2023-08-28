@@ -127,26 +127,59 @@ export const slides = [
   {
     id: 1,
     src: '/images/slide-1.webp',
-    alt: 'Slide 1'
+    alt: 'Slide 1',
   },
   {
     id: 2,
     src: '/images/slide-2.webp',
-    alt: 'Slide 1'
+    alt: 'Slide 1',
   },
   {
     id: 3,
     src: '/images/slide-3.webp',
-    alt: 'Slide 1'
+    alt: 'Slide 1',
   },
   {
     id: 4,
     src: '/images/slide-4.webp',
-    alt: 'Slide 1'
+    alt: 'Slide 1',
   },
   {
     id: 5,
     src: '/images/slide-5.webp',
-    alt: 'Slide 1'
+    alt: 'Slide 1',
   },
-]
+];
+
+export const faqs = [
+  {
+    id: 1,
+    question: 'What types of yoga classes does Refresh Studio offer?',
+    answer:
+      'Refresh Studio offers a diverse range of yoga classes, including Vinyasa, Ashtanga, Hatha, and Meditation. Our classes cater to practitioners of all levels, from beginners to experienced yogis.',
+  },
+  {
+    id: 2,
+    question: 'Are classes suitable for beginners?',
+    answer:
+      'Absolutely! We welcome all levels of practitioners. Our instructors provide modifications and guidance to ensure a safe and comfortable experience for beginners as well as those looking to deepen their practice.',
+  },
+  {
+    id: 3,
+    question: 'What amenities does Refresh Studio provide?',
+    answer:
+      'Refresh Studio offers a variety of amenities, including yoga props, a relaxation area, hydration station, changing rooms, and a community lounge. These facilities are designed to enhance your overall experience.',
+  },
+  {
+    id: 4,
+    question: 'Do I need to bring my own yoga mat?',
+    answer:
+      "While we provide yoga mats, you're welcome to bring your own if you prefer. Our mats are of high quality and sanitized regularly to ensure a clean and comfortable practice environment.",
+  },
+  {
+    id: 5,
+    question: 'How can I book a class at Refresh Studio?',
+    answer:
+      'Booking a class is easy! You can visit our website and use our online reservation system to view class schedules and secure your spot. You can also call our front desk during operating hours for assistance.',
+  },
+];
